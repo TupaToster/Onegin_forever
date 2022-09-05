@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="calc__file__len_8cpp" kind="file"><name>calc_file_len.cpp</name>
+    <member refid="calc__file__len_8cpp_1ad90c0d8e088cfb08fd65d1e6623cc5d2" kind="function"><name>calc_file_lines</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="mergesort_8cpp" kind="file"><name>mergesort.cpp</name>
+    <member refid="mergesort_8cpp_1a2c5d13dcc4dc3b40b86ac73c5526e30a" kind="function"><name>mergesort_str</name></member>
+    <member refid="mergesort_8cpp_1a2f1d71de59c94f2b07a3462fd64c5065" kind="function"><name>mergesort_str_inside</name></member>
+  </compound>
+  <compound refid="print__lines_8cpp" kind="file"><name>print_lines.cpp</name>
+    <member refid="print__lines_8cpp_1aa74a20e363dde8651d92f68cff8e7077" kind="function"><name>print_lines</name></member>
+  </compound>
+  <compound refid="protos_8h" kind="file"><name>protos.h</name>
+    <member refid="protos_8h_1a2c5d13dcc4dc3b40b86ac73c5526e30a" kind="function"><name>mergesort_str</name></member>
+    <member refid="protos_8h_1a2f1d71de59c94f2b07a3462fd64c5065" kind="function"><name>mergesort_str_inside</name></member>
+    <member refid="protos_8h_1ad90c0d8e088cfb08fd65d1e6623cc5d2" kind="function"><name>calc_file_lines</name></member>
+    <member refid="protos_8h_1a2c9cfa5318474c3648796c5ce38a7a14" kind="function"><name>read_lines</name></member>
+    <member refid="protos_8h_1aa74a20e363dde8651d92f68cff8e7077" kind="function"><name>print_lines</name></member>
+  </compound>
+  <compound refid="read__lines_8cpp" kind="file"><name>read_lines.cpp</name>
+    <member refid="read__lines_8cpp_1a2c9cfa5318474c3648796c5ce38a7a14" kind="function"><name>read_lines</name></member>
+  </compound>
+</doxygenindex>

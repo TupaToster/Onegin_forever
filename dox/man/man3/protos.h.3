@@ -1,0 +1,104 @@
+.TH "protos.h" 3 "Mon Sep 5 2022" "Version 0" "Onegin foreva" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+protos.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmergesort_str\fP (char **l, char **r)"
+.br
+.RI "Interface to interact with mergesort_str_inside\&. Look for docs there\&. "
+.ti -1c
+.RI "void \fBmergesort_str_inside\fP (char **l, char **r, char **temp)"
+.br
+.ti -1c
+.RI "unsigned int \fBcalc_file_lines\fP (FILE *src)"
+.br
+.RI "Calculates amount of lines in a file\&. "
+.ti -1c
+.RI "void \fBread_lines\fP (char ***lines, FILE *src, unsigned int line_cnt)"
+.br
+.ti -1c
+.RI "void \fBprint_lines\fP (char **lines, unsigned int line_cnt, FILE *out)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "unsigned int calc_file_lines (FILE * src)"
+
+.PP
+Calculates amount of lines in a file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsrc\fP - FILE* to calculate length of 
+.RE
+.PP
+
+.PP
+Definition at line 7 of file calc_file_len\&.cpp\&.
+.SS "void mergesort_str (char ** l, char ** r)"
+
+.PP
+Interface to interact with mergesort_str_inside\&. Look for docs there\&. 
+.PP
+Definition at line 6 of file mergesort\&.cpp\&.
+.SS "void mergesort_str_inside (char ** l, char ** r, char ** temp)"
+
+.PP
+.nf
+\brief Sorts an array of strings in right order
+\param l - pointer to the beginning of an array
+\param r - pointer to the element right after an array end
+\param temp - temporary array used for merging
+
+.fi
+.PP
+ Mergesorts through a c-string array tries not to eat memory but is bad at it also fast somehow 
+.PP
+Definition at line 24 of file mergesort\&.cpp\&.
+.SS "void print_lines (char ** lines, unsigned int line_cnt, FILE * out)"
+
+.PP
+.nf
+\brief Prints array of c-strings
+\param lines - char** type var, that points to the first elem of array
+\param line_cnt - amount of strings
+\param out - FILE* type var 
+
+.fi
+.PP
+ This function prints to 'out' file an array of c-strings 
+.PP
+Definition at line 11 of file print_lines\&.cpp\&.
+.SS "void read_lines (char *** lines, FILE * src, unsigned int line_cnt)"
+
+.PP
+.nf
+\brief Reads an array of c-strings
+\param lines - ptr to a char** that will point to an array of strings
+\param src - FILE* to read from
+\param line_cnt - max amount of lines read
+
+.fi
+.PP
+ Reads lines to an array of c-strings reads not more than line_cnt lines may read less and say nothing 
+.PP
+Definition at line 13 of file read_lines\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Onegin foreva from the source code\&.

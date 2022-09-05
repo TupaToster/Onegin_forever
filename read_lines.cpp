@@ -1,5 +1,15 @@
 #include "protos.h"
 
+/*!
+    \brief Reads an array of c-strings
+    \param lines - ptr to a char** that will point to an array of strings
+    \param src - FILE* to read from
+    \param line_cnt - max amount of lines read
+
+Reads lines to an array of c-strings
+reads not more than line_cnt lines
+may read less and say nothing
+*/
 void read_lines (char*** lines, FILE* src, unsigned int line_cnt) {
 
     char* temp = (char*) malloc (200);
@@ -12,7 +22,7 @@ void read_lines (char*** lines, FILE* src, unsigned int line_cnt) {
     for (unsigned int i = 0; i < line_cnt; i    ++) {
 
         temp = fgets (temp, 199, src);
-        assert (temp != NULL);
+        if (temp == NULL) break;
         (*lines)[i] = (char*) malloc (strlen (temp) + 1);
         strcpy ((*lines)[i], temp);
     }

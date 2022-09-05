@@ -1,5 +1,9 @@
 #include "protos.h"
 
+/*!
+    \brief Calculates amount of lines in a file
+    \param src - FILE* to calculate length of
+*/
 unsigned int calc_file_lines (FILE* src) {
 
     unsigned int line_cnt = 0;
