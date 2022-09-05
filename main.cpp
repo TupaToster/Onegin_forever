@@ -16,33 +16,15 @@ int main (int argc, char* argv[]) {
     FILE* onegin = fopen ("onegin", "r");
     assert (onegin != NULL);
     FILE* out    = fopen ("out", "w");
-    assert (out    != NULL);    
+    assert (out    != NULL);
 
-    unsigned int line_cnt = 0;
-    char* temp = (char*) malloc (200);
-    assert (temp != NULL);
-    
-    while (fgets (temp, 199, onegin) != NULL) line_cnt++;
+    unsigned int line_cnt = calc_file_lines (onegin);
 
-    fseek (onegin, SEEK_SET, 0);
+    char** lines = NULL;
 
-    char** lines = (char**) calloc (line_cnt + 1, sizeof (char*));
-    lines[line_cnt] = (char*) malloc (20);
-    strcpy (lines[line_cnt], "end of lol man");
-
-    for (unsigned int i = 0; i < line_cnt; i++) {
-
-        temp = fgets (temp, 199, onegin);
-        assert (temp != NULL);
-        lines[i] = (char*) malloc (strlen (temp) + 1);
-        strcpy (lines[i], temp);
-    }
+    read_lines (&lines, onegin, line_cnt);
 
     mergesort_str (lines, lines + line_cnt);
 
-    for (unsigned int i = 0; i < line_cnt; i++) {
-
-        fputs (lines[i], out);
-    }
-     
+    print_lines (lines, line_cnt, out);
 }
