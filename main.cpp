@@ -6,9 +6,7 @@
     \param argv - array of com line args
     \return 0 - if OK
 
-first it  reads strings from file with name Onegin_file
-second it sorts them
-and prints them
+first it  reads strings from file with name Onegin_file, second it sorts them and prints them
 */
 int main (int argc, char* argv[]) {
 

@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="read_lines.cpp" line="13" column="6" bodyfile="read_lines.cpp" bodystart="13" bodyend="29"/>
+        <location file="read_lines.cpp" line="13" column="6" bodyfile="read_lines.cpp" bodystart="13" bodyend="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -90,7 +90,9 @@
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*lines)[i]<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>malloc<sp/>(strlen<sp/>(temp)<sp/>+<sp/>1);</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy<sp/>((*lines)[i],<sp/>temp);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>free<sp/>(temp);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="read_lines.cpp"/>
   </compounddef>

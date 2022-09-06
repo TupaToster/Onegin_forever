@@ -105,7 +105,9 @@ $(document).ready(function(){initNavTree('read__lines_8cpp_source.html',''); ini
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        (*lines)[i] = (<span class="keywordtype">char</span>*) malloc (strlen (temp) + 1);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        strcpy ((*lines)[i], temp);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    free (temp);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="ttc" id="aprotos_8h_html"><div class="ttname"><a href="protos_8h.html">protos.h</a></div></div>
 <div class="ttc" id="aread__lines_8cpp_html_a2c9cfa5318474c3648796c5ce38a7a14"><div class="ttname"><a href="read__lines_8cpp.html#a2c9cfa5318474c3648796c5ce38a7a14">read_lines</a></div><div class="ttdeci">void read_lines(char ***lines, FILE *src, unsigned int line_cnt)</div><div class="ttdef"><b>Definition:</b> <a href="read__lines_8cpp_source.html#l00013">read_lines.cpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

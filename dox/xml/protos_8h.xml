@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="6" column="6" bodyfile="mergesort.cpp" bodystart="6" bodyend="12" declfile="protos.h" declline="6" declcolumn="6"/>
+        <location file="protos.h" line="6" column="6" bodyfile="mergesort.cpp" bodystart="6" bodyend="14" declfile="protos.h" declline="6" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1a2f1d71de59c94f2b07a3462fd64c5065" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="8" column="6" bodyfile="mergesort.cpp" bodystart="24" bodyend="71" declfile="protos.h" declline="8" declcolumn="6"/>
+        <location file="protos.h" line="8" column="6" bodyfile="mergesort.cpp" bodystart="26" bodyend="74" declfile="protos.h" declline="8" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1ad90c0d8e088cfb08fd65d1e6623cc5d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -182,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="protos.h" line="12" column="6" bodyfile="read_lines.cpp" bodystart="13" bodyend="29" declfile="protos.h" declline="12" declcolumn="6"/>
+        <location file="protos.h" line="12" column="6" bodyfile="read_lines.cpp" bodystart="13" bodyend="31" declfile="protos.h" declline="12" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="protos_8h_1aa74a20e363dde8651d92f68cff8e7077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
