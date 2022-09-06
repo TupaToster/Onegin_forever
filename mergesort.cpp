@@ -9,6 +9,8 @@ void mergesort_str (char** l, char** r) {
     assert (temp != NULL);
 
     mergesort_str_inside (l, r, temp);
+
+    free (temp);
 }
 
 /*!
@@ -68,4 +70,5 @@ void mergesort_str_inside (char** l, char** r, char** temp) {
         *l = temp[i];
         l++;
     }
+
 }

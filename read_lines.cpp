@@ -26,4 +26,6 @@ void read_lines (char*** lines, FILE* src, unsigned int line_cnt) {
         (*lines)[i] = (char*) malloc (strlen (temp) + 1);
         strcpy ((*lines)[i], temp);
     }
+
+    free (temp);
 }
