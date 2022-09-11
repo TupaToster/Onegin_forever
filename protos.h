@@ -45,3 +45,13 @@ size_t get_len (const char* file_name);
 text read_text (const char* file_name);
 
 char* buffer (const char* file_name, size_t* char_len, size_t* str_len);
+
+bool is_txt (const char c);
+
+int comp_str (const void* line1, const void* line2);
+
+int comp_arabic (const void* line1, const void* line2);
+
+int comp_core (line fst, line scd, int delta);
+
+void print_line (line out);
