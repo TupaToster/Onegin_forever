@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="protos_8h" kind="file" language="C++">
+    <compoundname>protos.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">sys/stat.h</includes>
+    <includedby refid="buffer_8cpp" local="yes">buffer.cpp</includedby>
+    <includedby refid="comps__and__checks_8cpp" local="yes">comps_and_checks.cpp</includedby>
+    <includedby refid="get__len_8cpp" local="yes">get_len.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="print__line_8cpp" local="yes">print_line.cpp</includedby>
+    <includedby refid="read__text_8cpp" local="yes">read_text.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="5">
+        <label>assert.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>fcntl.h</label>
+      </node>
+      <node id="7">
+        <label>sys/types.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="1">
+        <label>protos.h</label>
+        <link refid="protos_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structline" prot="public">line</innerclass>
+    <innerclass refid="structtext" prot="public">text</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="protos_8h_1a26f739cc284b817d9528e74502692cf7" prot="public" static="no">
+        <name>get_out</name>
+        <param><defname>cond</defname></param>
+        <param><defname>return_val</defname></param>
+        <param><defname>error_code</defname></param>
+        <initializer>    if (cond) {                                 \
+        errcod = error_code;                    \
+        return return_val;                      \
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="20" column="9" bodyfile="protos.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="protos_8h_1ada631bfe27c479e539e3f4f21f8ee376" prot="public" static="no">
+        <name>ERRCODES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="26" column="9" bodyfile="protos.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="protos_8h_1abfd51332ef0e0ba71f951a69e68e06be" prot="public" static="no" strong="no">
+        <type></type>
+        <name>error_codes</name>
+        <enumvalue id="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59" prot="public">
+          <name>OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984" prot="public">
+          <name>BAD_ALLOC</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e" prot="public">
+          <name>MEM_ERR</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>bufferisation, lstat, no assert yes error codes </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="12" column="1" bodyfile="protos.h" bodystart="12" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="protos_8h_1a687445b8299810ea812987ee1f1e40a8" prot="public" static="no" mutable="no">
+        <type>error_codes</type>
+        <definition>error_codes errcod</definition>
+        <argsstring></argsstring>
+        <name>errcod</name>
+        <briefdescription>
+<para>variable to store errors </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="18" column="20" bodyfile="main.cpp" bodystart="4" bodyend="-1" declfile="protos.h" declline="18" declcolumn="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="protos_8h_1af9a1bdab4547fd3a019e093879ff32f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t get_len</definition>
+        <argsstring>(const char *file_name)</argsstring>
+        <name>get_len</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+<para>Returns len of file in chars. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of file that&apos;s length will be returned </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>sizeof file in chars </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="43" column="8" bodyfile="get_len.cpp" bodystart="9" bodyend="16" declfile="protos.h" declline="43" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a85228864e31203894b06498904bba1f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtext" kindref="compound">text</ref></type>
+        <definition>text read_text</definition>
+        <argsstring>(const char *file_name)</argsstring>
+        <name>read_text</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Reads from file_name to text struct
+\param file_name name of file to read from
+\return struct text variable
+</verbatim> In process uses funcs buffer, get_len </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="45" column="6" bodyfile="read_text.cpp" bodystart="10" bodyend="35" declfile="protos.h" declline="45" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a6efd426acd223ddf35ac7d8fbeb95781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* buffer</definition>
+        <argsstring>(const char *file_name, size_t *char_len, size_t *str_len)</argsstring>
+        <name>buffer</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>char_len</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>str_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Bufferizes file input
+\param file_name name of file to buffer
+\param char_len ptr to where to put len of file in chars
+\param str_len ptr to where to put len of file in strings
+\return ptr to memory that contains file&apos;c contents
+\warning str_len calculation works correctly only on crlf endings
+</verbatim> Bufferizes file input and allocates memory for read content Calculates and returns length of file in chars and lines Allocated memory contains one &apos;\0&apos; in front of file contents and one after Puts <linebreak/>
+ in front of &apos;\0&apos; in buff if there is none </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Checks for absence of &apos;<linebreak/>
+&apos; right before EOF for prettyness</para>
+<para>&lt; If there is one, places &apos;<linebreak/>
+&apos; at the end of buff</para>
+        </inbodydescription>
+        <location file="protos.h" line="47" column="6" bodyfile="buffer.cpp" bodystart="16" bodyend="49" declfile="protos.h" declline="47" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a081a6c26b3871f66f9f33cf485749d7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool is_txt</definition>
+        <argsstring>(const char c)</argsstring>
+        <name>is_txt</name>
+        <param>
+          <type>const char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Checks if c is a letter/number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>char to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if is a letter/number </para>
+</simplesect>
+<simplesect kind="return"><para>false - in any other case </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="49" column="6" bodyfile="comps_and_checks.cpp" bodystart="9" bodyend="14" declfile="protos.h" declline="49" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a0c387f083e01e98270406f842e5539fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int comp_str</definition>
+        <argsstring>(const void *line1, const void *line2)</argsstring>
+        <name>comp_str</name>
+        <param>
+          <type>const void *</type>
+          <declname>line1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>line2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Compares two strings, straight
+\param line1 first line
+\param line2 second line
+\return -1 if line1 &lt; line2
+\return 0 if line1 = line2
+\return 1 if line1 &gt; line2
+</verbatim> Compares two strings the straight way prepares strings for comp_core with delta = 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="51" column="5" bodyfile="comps_and_checks.cpp" bodystart="28" bodyend="34" declfile="protos.h" declline="51" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a00852f5c07f148bb1645a9ab3c7c5763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int comp_arabic</definition>
+        <argsstring>(const void *line1, const void *line2)</argsstring>
+        <name>comp_arabic</name>
+        <param>
+          <type>const void *</type>
+          <declname>line1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>line2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Compares two strings, reverse
+\param line1 first line
+\param line2 second line
+\return -1 if line1 &lt; line2 in reverse
+\return 0 if line1 = line2
+\return 1 if line1 &gt; line2 in reverse
+</verbatim> Compares two strings in reverse Prepares strings for comp_core with delta = -1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="53" column="5" bodyfile="comps_and_checks.cpp" bodystart="48" bodyend="67" declfile="protos.h" declline="53" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1aa0fbc2bf8621745b9b60c6b64610c62e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int comp_core</definition>
+        <argsstring>(line fst, line scd, int delta)</argsstring>
+        <name>comp_core</name>
+        <param>
+          <type><ref refid="structline" kindref="compound">line</ref></type>
+          <declname>fst</declname>
+        </param>
+        <param>
+          <type><ref refid="structline" kindref="compound">line</ref></type>
+          <declname>scd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>\brief Core of comparison
+\param line1 first line
+\param line2 second line
+\param delta number that is added to lft of each string on each turn
+\return -1 - line1 &lt; line2 with current delta
+\return 0 - line1 = line2
+\return 1 - line1 &gt; line2 with current delta
+</verbatim> Compares two strings, where lft points to the beginning of string, rgt - to element next after end of string Uses delta to move ptrs that lets sort strings in reverse </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="55" column="5" bodyfile="comps_and_checks.cpp" bodystart="83" bodyend="102" declfile="protos.h" declline="55" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="protos_8h_1a989693a864596daad6a5c400f12ab9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_line</definition>
+        <argsstring>(line out)</argsstring>
+        <name>print_line</name>
+        <param>
+          <type><ref refid="structline" kindref="compound">line</ref></type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="57" column="6" bodyfile="print_line.cpp" bodystart="3" bodyend="6" declfile="protos.h" declline="57" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ERRCODES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>error_codes<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>OK<sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>BAD_ALLOC<sp/>=<sp/>-1,<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>MEM_ERR<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>error_codes<sp/>errcod;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>get_out(<sp/>cond,<sp/>return_val,<sp/>error_code<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errcod<sp/>=<sp/>error_code;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>return_val;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERRCODES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structline" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structline" kindref="compound">line</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lft<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>rgt<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structtext" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtext" kindref="compound">text</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>char_len<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>str_len<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structline" kindref="compound">line</ref>*<sp/>lines<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>get_len<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="structtext" kindref="compound">text</ref><sp/>read_text<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>char_len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>str_len);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_txt<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp_str<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line2);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp_arabic<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line2);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp_core<sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>fst,<sp/><ref refid="structline" kindref="compound">line</ref><sp/>scd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_line<sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>out);</highlight></codeline>
+    </programlisting>
+    <location file="protos.h"/>
+  </compounddef>
+</doxygen>

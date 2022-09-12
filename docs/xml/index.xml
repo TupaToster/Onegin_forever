@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="structline" kind="struct"><name>line</name>
+    <member refid="structline_1a2aa8bf75ce8dbb1642cc4075a49327f9" kind="variable"><name>lft</name></member>
+    <member refid="structline_1a9d8117828329e501e5d3a6fd93a3ef4f" kind="variable"><name>rgt</name></member>
+  </compound>
+  <compound refid="structtext" kind="struct"><name>text</name>
+    <member refid="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" kind="variable"><name>char_len</name></member>
+    <member refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" kind="variable"><name>str_len</name></member>
+    <member refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kind="variable"><name>txt</name></member>
+    <member refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kind="variable"><name>lines</name></member>
+  </compound>
+  <compound refid="buffer_8cpp" kind="file"><name>buffer.cpp</name>
+    <member refid="buffer_8cpp_1a6efd426acd223ddf35ac7d8fbeb95781" kind="function"><name>buffer</name></member>
+  </compound>
+  <compound refid="comps__and__checks_8cpp" kind="file"><name>comps_and_checks.cpp</name>
+    <member refid="comps__and__checks_8cpp_1a081a6c26b3871f66f9f33cf485749d7d" kind="function"><name>is_txt</name></member>
+    <member refid="comps__and__checks_8cpp_1a0c387f083e01e98270406f842e5539fe" kind="function"><name>comp_str</name></member>
+    <member refid="comps__and__checks_8cpp_1a00852f5c07f148bb1645a9ab3c7c5763" kind="function"><name>comp_arabic</name></member>
+    <member refid="comps__and__checks_8cpp_1aa0fbc2bf8621745b9b60c6b64610c62e" kind="function"><name>comp_core</name></member>
+  </compound>
+  <compound refid="get__len_8cpp" kind="file"><name>get_len.cpp</name>
+    <member refid="get__len_8cpp_1af9a1bdab4547fd3a019e093879ff32f8" kind="function"><name>get_len</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a687445b8299810ea812987ee1f1e40a8" kind="variable"><name>errcod</name></member>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="print__line_8cpp" kind="file"><name>print_line.cpp</name>
+    <member refid="print__line_8cpp_1a989693a864596daad6a5c400f12ab9f8" kind="function"><name>print_line</name></member>
+  </compound>
+  <compound refid="protos_8h" kind="file"><name>protos.h</name>
+    <member refid="protos_8h_1a26f739cc284b817d9528e74502692cf7" kind="define"><name>get_out</name></member>
+    <member refid="protos_8h_1ada631bfe27c479e539e3f4f21f8ee376" kind="define"><name>ERRCODES</name></member>
+    <member refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06be" kind="enum"><name>error_codes</name></member>
+    <member refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59" kind="enumvalue"><name>OK</name></member>
+    <member refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984" kind="enumvalue"><name>BAD_ALLOC</name></member>
+    <member refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e" kind="enumvalue"><name>MEM_ERR</name></member>
+    <member refid="protos_8h_1a687445b8299810ea812987ee1f1e40a8" kind="variable"><name>errcod</name></member>
+    <member refid="protos_8h_1af9a1bdab4547fd3a019e093879ff32f8" kind="function"><name>get_len</name></member>
+    <member refid="protos_8h_1a85228864e31203894b06498904bba1f5" kind="function"><name>read_text</name></member>
+    <member refid="protos_8h_1a6efd426acd223ddf35ac7d8fbeb95781" kind="function"><name>buffer</name></member>
+    <member refid="protos_8h_1a081a6c26b3871f66f9f33cf485749d7d" kind="function"><name>is_txt</name></member>
+    <member refid="protos_8h_1a0c387f083e01e98270406f842e5539fe" kind="function"><name>comp_str</name></member>
+    <member refid="protos_8h_1a00852f5c07f148bb1645a9ab3c7c5763" kind="function"><name>comp_arabic</name></member>
+    <member refid="protos_8h_1aa0fbc2bf8621745b9b60c6b64610c62e" kind="function"><name>comp_core</name></member>
+    <member refid="protos_8h_1a989693a864596daad6a5c400f12ab9f8" kind="function"><name>print_line</name></member>
+  </compound>
+  <compound refid="read__text_8cpp" kind="file"><name>read_text.cpp</name>
+    <member refid="read__text_8cpp_1a85228864e31203894b06498904bba1f5" kind="function"><name>read_text</name></member>
+  </compound>
+</doxygenindex>

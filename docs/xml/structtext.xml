@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structtext" kind="struct" language="C++" prot="public">
+    <compoundname>text</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t text::char_len</definition>
+        <argsstring></argsstring>
+        <name>char_len</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="37" column="12" bodyfile="protos.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1a2ae159e384419ba07db9ef32b79870f8" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t text::str_len</definition>
+        <argsstring></argsstring>
+        <name>str_len</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="38" column="12" bodyfile="protos.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1a1335a6441ab32bd9e9519a215977b367" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* text::txt</definition>
+        <argsstring></argsstring>
+        <name>txt</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="39" column="10" bodyfile="protos.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1a826ba5613feb94342be61f8cce1c6771" prot="public" static="no" mutable="no">
+        <type><ref refid="structline" kindref="compound">line</ref> *</type>
+        <definition>line* text::lines</definition>
+        <argsstring></argsstring>
+        <name>lines</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="protos.h" line="40" column="10" bodyfile="protos.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>text</label>
+        <link refid="structtext"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>lines</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>line</label>
+        <link refid="structline"/>
+      </node>
+    </collaborationgraph>
+    <location file="protos.h" line="35" column="1" bodyfile="protos.h" bodystart="35" bodyend="41"/>
+    <listofallmembers>
+      <member refid="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" prot="public" virt="non-virtual"><scope>text</scope><name>char_len</name></member>
+      <member refid="structtext_1a826ba5613feb94342be61f8cce1c6771" prot="public" virt="non-virtual"><scope>text</scope><name>lines</name></member>
+      <member refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" prot="public" virt="non-virtual"><scope>text</scope><name>str_len</name></member>
+      <member refid="structtext_1a1335a6441ab32bd9e9519a215977b367" prot="public" virt="non-virtual"><scope>text</scope><name>txt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
