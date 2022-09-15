@@ -1,12 +1,5 @@
 #include "protos.h"
 
-/*!
-    \brief Reads from file_name to text struct
-    \param file_name name of file to read from
-    \return struct text variable
-
-In process uses funcs buffer, get_len
-*/
 text read_text (const char* file_name) {
 
     text input = {};
