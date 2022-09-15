@@ -30,7 +30,7 @@
       </node>
       <node id="2">
         <label>protos.h</label>
-        <link refid="protos_8h_source"/>
+        <link refid="protos_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -94,9 +94,9 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;protos.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>char_len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>str_len)<sp/>{</highlight></codeline>
+<codeline lineno="16" refid="buffer_8cpp_1a6efd426acd223ddf35ac7d8fbeb95781" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="buffer_8cpp_1a6efd426acd223ddf35ac7d8fbeb95781" kindref="member">buffer</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>char_len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>str_len)<sp/>{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE*<sp/>input<sp/>=<sp/>fopen<sp/>(file_name,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n_before_EOF<sp/>=<sp/>0;</highlight></codeline>
@@ -109,12 +109,12 @@
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>fseek<sp/>(input,<sp/>0,<sp/>SEEK_SET);<sp/></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>*char_len<sp/>=<sp/>get_len<sp/>(file_name);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>*char_len<sp/>=<sp/><ref refid="get__len_8cpp_1af9a1bdab4547fd3a019e093879ff32f8" kindref="member">get_len</ref><sp/>(file_name);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buff<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<sp/>calloc<sp/>(*char_len<sp/>+<sp/>2<sp/>+<sp/>n_before_EOF,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">));</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>buff++;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>get_out<sp/>(fread<sp/>(buff,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>*char_len<sp/>-<sp/>n_before_EOF,<sp/>input)<sp/>==<sp/>0,<sp/>NULL,<sp/>MEM_ERR);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a26f739cc284b817d9528e74502692cf7" kindref="member">get_out</ref><sp/>(fread<sp/>(buff,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>*char_len<sp/>-<sp/>n_before_EOF,<sp/>input)<sp/>==<sp/>0,<sp/>NULL,<sp/><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref>);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>buff[*char_len<sp/>-<sp/>n_before_EOF]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>

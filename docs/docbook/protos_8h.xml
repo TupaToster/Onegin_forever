@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_protos_8h" xml:lang="en-US">
+<title>protos.h File Reference</title>
+<indexterm><primary>protos.h</primary></indexterm>
+<programlisting>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;assert.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structline">line</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structtext">text</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_protos_8h_1a26f739cc284b817d9528e74502692cf7">get_out</link>(cond,  return_val,  error_code)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_protos_8h_1ada631bfe27c479e539e3f4f21f8ee376">ERRCODES</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06be">error_codes</link> { <link linkend="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59">OK</link> = 0
+, <link linkend="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984">BAD_ALLOC</link> = -1
+, <link linkend="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e">MEM_ERR</link> = 1
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>size_t <link linkend="_protos_8h_1af9a1bdab4547fd3a019e093879ff32f8">get_len</link> (const char *file_name)</para>
+
+<para>Returns len of file in chars. </para>
+</listitem>
+            <listitem><para><link linkend="_structtext">text</link> <link linkend="_protos_8h_1a85228864e31203894b06498904bba1f5">read_text</link> (const char *file_name)</para>
+</listitem>
+            <listitem><para>char * <link linkend="_protos_8h_1a6efd426acd223ddf35ac7d8fbeb95781">buffer</link> (const char *file_name, size_t *char_len, size_t *str_len)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_protos_8h_1a081a6c26b3871f66f9f33cf485749d7d">is_txt</link> (const char c)</para>
+
+<para>Checks if c is a letter/number. </para>
+</listitem>
+            <listitem><para>int <link linkend="_protos_8h_1a0c387f083e01e98270406f842e5539fe">comp_str</link> (const void *line1, const void *line2)</para>
+</listitem>
+            <listitem><para>int <link linkend="_protos_8h_1a00852f5c07f148bb1645a9ab3c7c5763">comp_arabic</link> (const void *line1, const void *line2)</para>
+</listitem>
+            <listitem><para>int <link linkend="_protos_8h_1aa0fbc2bf8621745b9b60c6b64610c62e">comp_core</link> (<link linkend="_structline">line</link> fst, <link linkend="_structline">line</link> scd, int delta)</para>
+</listitem>
+            <listitem><para>void <link linkend="_protos_8h_1a989693a864596daad6a5c400f12ab9f8">print_line</link> (<link linkend="_structline">line</link> out)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06be">error_codes</link> <link linkend="_protos_8h_1a687445b8299810ea812987ee1f1e40a8">errcod</link></para>
+
+<para>variable to store errors </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_protos_8h_1ada631bfe27c479e539e3f4f21f8ee376"/>    <section>
+    <title>ERRCODES</title>
+<indexterm><primary>ERRCODES</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>ERRCODES</secondary></indexterm>
+<para><computeroutput>#define ERRCODES</computeroutput></para><para>
+Definition at line 26 of file protos.h.</para>
+    </section><anchor xml:id="_protos_8h_1a26f739cc284b817d9528e74502692cf7"/>    <section>
+    <title>get_out</title>
+<indexterm><primary>get_out</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>get_out</secondary></indexterm>
+<para><computeroutput>#define get_out( cond,  return_val,  error_code)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(cond)&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;errcod&#32;=&#32;error_code;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;return_val;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;}
+</programlisting><para>
+Definition at line 20 of file protos.h.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06be"/>    <section>
+    <title>error_codes</title>
+<indexterm><primary>error_codes</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>error_codes</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06be">error_codes</link></computeroutput></para>
+<para><para><link linkend="_todo_1_todo000001">Todo</link> 
+<para>bufferisation, lstat, no assert yes error codes </para>
+</para></para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>OK</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>OK</secondary></indexterm>
+<anchor xml:id="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59"/>OK</entry><entry></entry></row><row><entry><indexterm><primary>BAD_ALLOC</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>BAD_ALLOC</secondary></indexterm>
+<anchor xml:id="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984"/>BAD_ALLOC</entry><entry></entry></row><row><entry><indexterm><primary>MEM_ERR</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>MEM_ERR</secondary></indexterm>
+<anchor xml:id="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e"/>MEM_ERR</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 12 of file protos.h.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_protos_8h_1a6efd426acd223ddf35ac7d8fbeb95781"/>    <section>
+    <title>buffer()</title>
+<indexterm><primary>buffer</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>buffer</secondary></indexterm>
+<para><computeroutput>char* buffer (const char * file_name, size_t * char_len, size_t * str_len)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Bufferizes file input
+\param file_name name of file to buffer
+\param char_len ptr to where to put len of file in chars
+\param str_len ptr to where to put len of file in strings
+\return ptr to memory that contains file&apos;c contents
+\warning str_len calculation works correctly only on crlf endings
+</computeroutput></literallayout> Bufferizes file input and allocates memory for read content Calculates and returns length of file in chars and lines Allocated memory contains one &apos;\0&apos; in front of file contents and one after Puts 
+<literallayout>&#160;&#xa;</literallayout>
+ in front of &apos;\0&apos; in buff if there is none </para>
+
+<para>&lt; Checks for absence of &apos;
+<literallayout>&#160;&#xa;</literallayout>
+&apos; right before EOF for prettyness</para>
+
+<para>&lt; If there is one, places &apos;
+<literallayout>&#160;&#xa;</literallayout>
+&apos; at the end of buff</para>
+<para>
+Definition at line 16 of file buffer.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a00852f5c07f148bb1645a9ab3c7c5763"/>    <section>
+    <title>comp_arabic()</title>
+<indexterm><primary>comp_arabic</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>comp_arabic</secondary></indexterm>
+<para><computeroutput>int comp_arabic (const void * line1, const void * line2)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Compares two strings, reverse
+\param line1 first line
+\param line2 second line
+\return -1 if line1 &lt; line2 in reverse
+\return 0 if line1 = line2
+\return 1 if line1 &gt; line2 in reverse
+</computeroutput></literallayout> Compares two strings in reverse Prepares strings for comp_core with delta = -1 </para>
+<para>
+Definition at line 48 of file comps_and_checks.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1aa0fbc2bf8621745b9b60c6b64610c62e"/>    <section>
+    <title>comp_core()</title>
+<indexterm><primary>comp_core</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>comp_core</secondary></indexterm>
+<para><computeroutput>int comp_core (<link linkend="_structline">line</link> fst, <link linkend="_structline">line</link> scd, int delta)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Core of comparison
+\param line1 first line
+\param line2 second line
+\param delta number that is added to lft of each string on each turn
+\return -1 - line1 &lt; line2 with current delta
+\return 0 - line1 = line2
+\return 1 - line1 &gt; line2 with current delta
+</computeroutput></literallayout> Compares two strings, where lft points to the beginning of string, rgt - to element next after end of string Uses delta to move ptrs that lets sort strings in reverse </para>
+<para>
+Definition at line 83 of file comps_and_checks.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a0c387f083e01e98270406f842e5539fe"/>    <section>
+    <title>comp_str()</title>
+<indexterm><primary>comp_str</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>comp_str</secondary></indexterm>
+<para><computeroutput>int comp_str (const void * line1, const void * line2)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Compares two strings, straight
+\param line1 first line
+\param line2 second line
+\return -1 if line1 &lt; line2
+\return 0 if line1 = line2
+\return 1 if line1 &gt; line2
+</computeroutput></literallayout> Compares two strings the straight way prepares strings for comp_core with delta = 1 </para>
+<para>
+Definition at line 28 of file comps_and_checks.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1af9a1bdab4547fd3a019e093879ff32f8"/>    <section>
+    <title>get_len()</title>
+<indexterm><primary>get_len</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>get_len</secondary></indexterm>
+<para><computeroutput>size_t get_len (const char * file_name)</computeroutput></para><para>
+
+<para>Returns len of file in chars. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>file_name</entry>
+                                <entry>
+<para>name of file that&apos;s length will be returned </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>sizeof file in chars </para>
+</formalpara>
+</para>
+<para>
+Definition at line 9 of file get_len.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a081a6c26b3871f66f9f33cf485749d7d"/>    <section>
+    <title>is_txt()</title>
+<indexterm><primary>is_txt</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>is_txt</secondary></indexterm>
+<para><computeroutput>bool is_txt (const char c)</computeroutput></para><para>
+
+<para>Checks if c is a letter/number. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>c</entry>
+                                <entry>
+<para>char to check </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if is a letter/number </para>
+
+<para>false - in any other case </para>
+</formalpara>
+</para>
+<para>
+Definition at line 9 of file comps_and_checks.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a989693a864596daad6a5c400f12ab9f8"/>    <section>
+    <title>print_line()</title>
+<indexterm><primary>print_line</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>print_line</secondary></indexterm>
+<para><computeroutput>void print_line (<link linkend="_structline">line</link> out)</computeroutput></para><para>
+Definition at line 3 of file print_line.cpp.</para>
+    </section><anchor xml:id="_protos_8h_1a85228864e31203894b06498904bba1f5"/>    <section>
+    <title>read_text()</title>
+<indexterm><primary>read_text</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>read_text</secondary></indexterm>
+<para><computeroutput><link linkend="_structtext">text</link> read_text (const char * file_name)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Reads from file_name to text struct
+\param file_name name of file to read from
+\return struct text variable
+</computeroutput></literallayout> In process uses funcs buffer, get_len </para>
+<para>
+Definition at line 10 of file read_text.cpp.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_protos_8h_1a687445b8299810ea812987ee1f1e40a8"/>    <section>
+    <title>errcod</title>
+<indexterm><primary>errcod</primary><secondary>protos.h</secondary></indexterm>
+<indexterm><primary>protos.h</primary><secondary>errcod</secondary></indexterm>
+<para><computeroutput><link linkend="_protos_8h_1abfd51332ef0e0ba71f951a69e68e06be">error_codes</link> errcod<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+
+<para>variable to store errors </para>
+</para>
+<para>
+Definition at line 4 of file main.cpp.</para>
+</section>
+</section>
+</section>

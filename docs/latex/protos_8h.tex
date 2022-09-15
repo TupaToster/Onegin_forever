@@ -1,0 +1,279 @@
+\hypertarget{protos_8h}{}\doxysection{protos.\+h File Reference}
+\label{protos_8h}\index{protos.h@{protos.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structline}{line}}
+\item 
+struct \mbox{\hyperlink{structtext}{text}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{protos_8h_a26f739cc284b817d9528e74502692cf7}{get\+\_\+out}}(cond,  return\+\_\+val,  error\+\_\+code)
+\item 
+\#define \mbox{\hyperlink{protos_8h_ada631bfe27c479e539e3f4f21f8ee376}{ERRCODES}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{protos_8h_abfd51332ef0e0ba71f951a69e68e06be}{error\+\_\+codes}} \{ \mbox{\hyperlink{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59}{OK}} = 0
+, \mbox{\hyperlink{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984}{BAD\+\_\+\+ALLOC}} = -\/1
+, \mbox{\hyperlink{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e}{MEM\+\_\+\+ERR}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{protos_8h_af9a1bdab4547fd3a019e093879ff32f8}{get\+\_\+len}} (const char $\ast$file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Returns len of file in chars. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtext}{text}} \mbox{\hyperlink{protos_8h_a85228864e31203894b06498904bba1f5}{read\+\_\+text}} (const char $\ast$file\+\_\+name)
+\item 
+char $\ast$ \mbox{\hyperlink{protos_8h_a6efd426acd223ddf35ac7d8fbeb95781}{buffer}} (const char $\ast$file\+\_\+name, size\+\_\+t $\ast$char\+\_\+len, size\+\_\+t $\ast$str\+\_\+len)
+\item 
+bool \mbox{\hyperlink{protos_8h_a081a6c26b3871f66f9f33cf485749d7d}{is\+\_\+txt}} (const char c)
+\begin{DoxyCompactList}\small\item\em Checks if c is a letter/number. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{protos_8h_a0c387f083e01e98270406f842e5539fe}{comp\+\_\+str}} (const void $\ast$line1, const void $\ast$line2)
+\item 
+int \mbox{\hyperlink{protos_8h_a00852f5c07f148bb1645a9ab3c7c5763}{comp\+\_\+arabic}} (const void $\ast$line1, const void $\ast$line2)
+\item 
+int \mbox{\hyperlink{protos_8h_aa0fbc2bf8621745b9b60c6b64610c62e}{comp\+\_\+core}} (\mbox{\hyperlink{structline}{line}} fst, \mbox{\hyperlink{structline}{line}} scd, int delta)
+\item 
+void \mbox{\hyperlink{protos_8h_a989693a864596daad6a5c400f12ab9f8}{print\+\_\+line}} (\mbox{\hyperlink{structline}{line}} out)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{protos_8h_abfd51332ef0e0ba71f951a69e68e06be}{error\+\_\+codes}} \mbox{\hyperlink{protos_8h_a687445b8299810ea812987ee1f1e40a8}{errcod}}
+\begin{DoxyCompactList}\small\item\em variable to store errors \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{protos_8h_ada631bfe27c479e539e3f4f21f8ee376}\label{protos_8h_ada631bfe27c479e539e3f4f21f8ee376}} 
+\index{protos.h@{protos.h}!ERRCODES@{ERRCODES}}
+\index{ERRCODES@{ERRCODES}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{ERRCODES}{ERRCODES}}
+{\footnotesize\ttfamily \#define ERRCODES}
+
+
+
+Definition at line 26 of file protos.\+h.
+
+\mbox{\Hypertarget{protos_8h_a26f739cc284b817d9528e74502692cf7}\label{protos_8h_a26f739cc284b817d9528e74502692cf7}} 
+\index{protos.h@{protos.h}!get\_out@{get\_out}}
+\index{get\_out@{get\_out}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{get\_out}{get\_out}}
+{\footnotesize\ttfamily \#define get\+\_\+out(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{return\+\_\+val,  }\item[{}]{error\+\_\+code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (cond) \{                                 \(\backslash\)}
+\DoxyCodeLine{        errcod = error\_code;                    \(\backslash\)}
+\DoxyCodeLine{        return return\_val;                      \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Definition at line 20 of file protos.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{protos_8h_abfd51332ef0e0ba71f951a69e68e06be}\label{protos_8h_abfd51332ef0e0ba71f951a69e68e06be}} 
+\index{protos.h@{protos.h}!error\_codes@{error\_codes}}
+\index{error\_codes@{error\_codes}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{error\_codes}{error\_codes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{protos_8h_abfd51332ef0e0ba71f951a69e68e06be}{error\+\_\+codes}}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]bufferisation, lstat, no assert yes error codes \end{DoxyRefDesc}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!protos.h@{protos.h}}\index{protos.h@{protos.h}!OK@{OK}}}\mbox{\Hypertarget{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59}\label{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59}} 
+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAD\_ALLOC@{BAD\_ALLOC}!protos.h@{protos.h}}\index{protos.h@{protos.h}!BAD\_ALLOC@{BAD\_ALLOC}}}\mbox{\Hypertarget{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984}\label{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984}} 
+BAD\+\_\+\+ALLOC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEM\_ERR@{MEM\_ERR}!protos.h@{protos.h}}\index{protos.h@{protos.h}!MEM\_ERR@{MEM\_ERR}}}\mbox{\Hypertarget{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e}\label{protos_8h_abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e}} 
+MEM\+\_\+\+ERR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 12 of file protos.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{protos_8h_a6efd426acd223ddf35ac7d8fbeb95781}\label{protos_8h_a6efd426acd223ddf35ac7d8fbeb95781}} 
+\index{protos.h@{protos.h}!buffer@{buffer}}
+\index{buffer@{buffer}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}}
+{\footnotesize\ttfamily char$\ast$ buffer (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{size\+\_\+t $\ast$}]{char\+\_\+len,  }\item[{size\+\_\+t $\ast$}]{str\+\_\+len }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Bufferizes file input
+\param file_name name of file to buffer
+\param char_len ptr to where to put len of file in chars
+\param str_len ptr to where to put len of file in strings
+\return ptr to memory that contains file'c contents
+\warning str_len calculation works correctly only on crlf endings
+\end{DoxyVerb}
+ Bufferizes file input and allocates memory for read content Calculates and returns length of file in chars and lines Allocated memory contains one \textquotesingle{}\textbackslash{}0\textquotesingle{} in front of file contents and one after Puts ~\newline
+ in front of \textquotesingle{}\textbackslash{}0\textquotesingle{} in buff if there is none $<$ Checks for absence of \textquotesingle{}~\newline
+\textquotesingle{} right before EOF for prettyness
+
+$<$ If there is one, places \textquotesingle{}~\newline
+\textquotesingle{} at the end of buff
+
+Definition at line 16 of file buffer.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a00852f5c07f148bb1645a9ab3c7c5763}\label{protos_8h_a00852f5c07f148bb1645a9ab3c7c5763}} 
+\index{protos.h@{protos.h}!comp\_arabic@{comp\_arabic}}
+\index{comp\_arabic@{comp\_arabic}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{comp\_arabic()}{comp\_arabic()}}
+{\footnotesize\ttfamily int comp\+\_\+arabic (\begin{DoxyParamCaption}\item[{const void $\ast$}]{line1,  }\item[{const void $\ast$}]{line2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Compares two strings, reverse
+\param line1 first line
+\param line2 second line
+\return -1 if line1 < line2 in reverse
+\return 0 if line1 = line2
+\return 1 if line1 > line2 in reverse
+\end{DoxyVerb}
+ Compares two strings in reverse Prepares strings for comp\+\_\+core with delta = -\/1 
+
+Definition at line 48 of file comps\+\_\+and\+\_\+checks.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_aa0fbc2bf8621745b9b60c6b64610c62e}\label{protos_8h_aa0fbc2bf8621745b9b60c6b64610c62e}} 
+\index{protos.h@{protos.h}!comp\_core@{comp\_core}}
+\index{comp\_core@{comp\_core}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{comp\_core()}{comp\_core()}}
+{\footnotesize\ttfamily int comp\+\_\+core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}}}]{fst,  }\item[{\mbox{\hyperlink{structline}{line}}}]{scd,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Core of comparison
+\param line1 first line
+\param line2 second line
+\param delta number that is added to lft of each string on each turn
+\return -1 - line1 < line2 with current delta
+\return 0 - line1 = line2
+\return 1 - line1 > line2 with current delta
+\end{DoxyVerb}
+ Compares two strings, where lft points to the beginning of string, rgt -\/ to element next after end of string Uses delta to move ptrs that lets sort strings in reverse 
+
+Definition at line 83 of file comps\+\_\+and\+\_\+checks.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a0c387f083e01e98270406f842e5539fe}\label{protos_8h_a0c387f083e01e98270406f842e5539fe}} 
+\index{protos.h@{protos.h}!comp\_str@{comp\_str}}
+\index{comp\_str@{comp\_str}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{comp\_str()}{comp\_str()}}
+{\footnotesize\ttfamily int comp\+\_\+str (\begin{DoxyParamCaption}\item[{const void $\ast$}]{line1,  }\item[{const void $\ast$}]{line2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Compares two strings, straight
+\param line1 first line
+\param line2 second line
+\return -1 if line1 < line2
+\return 0 if line1 = line2
+\return 1 if line1 > line2
+\end{DoxyVerb}
+ Compares two strings the straight way prepares strings for comp\+\_\+core with delta = 1 
+
+Definition at line 28 of file comps\+\_\+and\+\_\+checks.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_af9a1bdab4547fd3a019e093879ff32f8}\label{protos_8h_af9a1bdab4547fd3a019e093879ff32f8}} 
+\index{protos.h@{protos.h}!get\_len@{get\_len}}
+\index{get\_len@{get\_len}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{get\_len()}{get\_len()}}
+{\footnotesize\ttfamily size\+\_\+t get\+\_\+len (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Returns len of file in chars. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & name of file that\textquotesingle{}s length will be returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sizeof file in chars 
+\end{DoxyReturn}
+
+
+Definition at line 9 of file get\+\_\+len.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a081a6c26b3871f66f9f33cf485749d7d}\label{protos_8h_a081a6c26b3871f66f9f33cf485749d7d}} 
+\index{protos.h@{protos.h}!is\_txt@{is\_txt}}
+\index{is\_txt@{is\_txt}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{is\_txt()}{is\_txt()}}
+{\footnotesize\ttfamily bool is\+\_\+txt (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})}
+
+
+
+Checks if c is a letter/number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & char to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if is a letter/number 
+
+false -\/ in any other case 
+\end{DoxyReturn}
+
+
+Definition at line 9 of file comps\+\_\+and\+\_\+checks.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a989693a864596daad6a5c400f12ab9f8}\label{protos_8h_a989693a864596daad6a5c400f12ab9f8}} 
+\index{protos.h@{protos.h}!print\_line@{print\_line}}
+\index{print\_line@{print\_line}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{print\_line()}{print\_line()}}
+{\footnotesize\ttfamily void print\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}}}]{out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file print\+\_\+line.\+cpp.
+
+\mbox{\Hypertarget{protos_8h_a85228864e31203894b06498904bba1f5}\label{protos_8h_a85228864e31203894b06498904bba1f5}} 
+\index{protos.h@{protos.h}!read\_text@{read\_text}}
+\index{read\_text@{read\_text}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{read\_text()}{read\_text()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtext}{text}} read\+\_\+text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Reads from file_name to text struct
+\param file_name name of file to read from
+\return struct text variable
+\end{DoxyVerb}
+ In process uses funcs buffer, get\+\_\+len 
+
+Definition at line 10 of file read\+\_\+text.\+cpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{protos_8h_a687445b8299810ea812987ee1f1e40a8}\label{protos_8h_a687445b8299810ea812987ee1f1e40a8}} 
+\index{protos.h@{protos.h}!errcod@{errcod}}
+\index{errcod@{errcod}!protos.h@{protos.h}}
+\doxysubsubsection{\texorpdfstring{errcod}{errcod}}
+{\footnotesize\ttfamily \mbox{\hyperlink{protos_8h_abfd51332ef0e0ba71f951a69e68e06be}{error\+\_\+codes}} errcod\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+variable to store errors 
+
+
+
+Definition at line 4 of file main.\+cpp.
+

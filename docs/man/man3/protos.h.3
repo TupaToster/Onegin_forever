@@ -1,0 +1,268 @@
+.TH "protos.h" 3 "Mon Sep 12 2022" "Version 3.01.12" "Onegin forever" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+protos.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <fcntl\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBline\fP"
+.br
+.ti -1c
+.RI "struct \fBtext\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBget_out\fP(cond,  return_val,  error_code)"
+.br
+.ti -1c
+.RI "#define \fBERRCODES\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBerror_codes\fP { \fBOK\fP = 0, \fBBAD_ALLOC\fP = -1, \fBMEM_ERR\fP = 1 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "size_t \fBget_len\fP (const char *file_name)"
+.br
+.RI "Returns len of file in chars\&. "
+.ti -1c
+.RI "\fBtext\fP \fBread_text\fP (const char *file_name)"
+.br
+.ti -1c
+.RI "char * \fBbuffer\fP (const char *file_name, size_t *char_len, size_t *str_len)"
+.br
+.ti -1c
+.RI "bool \fBis_txt\fP (const char c)"
+.br
+.RI "Checks if c is a letter/number\&. "
+.ti -1c
+.RI "int \fBcomp_str\fP (const void *line1, const void *line2)"
+.br
+.ti -1c
+.RI "int \fBcomp_arabic\fP (const void *line1, const void *line2)"
+.br
+.ti -1c
+.RI "int \fBcomp_core\fP (\fBline\fP fst, \fBline\fP scd, int delta)"
+.br
+.ti -1c
+.RI "void \fBprint_line\fP (\fBline\fP out)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBerror_codes\fP \fBerrcod\fP"
+.br
+.RI "variable to store errors "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ERRCODES"
+
+.PP
+Definition at line 26 of file protos\&.h\&.
+.SS "#define get_out(cond, return_val, error_code)"
+\fBValue:\fP
+.PP
+.nf
+    if (cond) {                                 \
+        errcod = error_code;                    \
+        return return_val;                      \
+    }
+.fi
+.PP
+Definition at line 20 of file protos\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBerror_codes\fP"
+
+.PP
+\fBTodo\fP
+.RS 4
+bufferisation, lstat, no assert yes error codes 
+.RE
+.PP
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOK \fP\fP
+.TP
+\fB\fIBAD_ALLOC \fP\fP
+.TP
+\fB\fIMEM_ERR \fP\fP
+.PP
+Definition at line 12 of file protos\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "char* buffer (const char * file_name, size_t * char_len, size_t * str_len)"
+
+.PP
+.nf
+\brief Bufferizes file input
+\param file_name name of file to buffer
+\param char_len ptr to where to put len of file in chars
+\param str_len ptr to where to put len of file in strings
+\return ptr to memory that contains file'c contents
+\warning str_len calculation works correctly only on crlf endings
+
+.fi
+.PP
+ Bufferizes file input and allocates memory for read content Calculates and returns length of file in chars and lines Allocated memory contains one '\\0' in front of file contents and one after Puts 
+.br
+ in front of '\\0' in buff if there is none < Checks for absence of '
+.br
+' right before EOF for prettyness
+.PP
+< If there is one, places '
+.br
+' at the end of buff
+.PP
+Definition at line 16 of file buffer\&.cpp\&.
+.SS "int comp_arabic (const void * line1, const void * line2)"
+
+.PP
+.nf
+\brief Compares two strings, reverse
+\param line1 first line
+\param line2 second line
+\return -1 if line1 < line2 in reverse
+\return 0 if line1 = line2
+\return 1 if line1 > line2 in reverse
+
+.fi
+.PP
+ Compares two strings in reverse Prepares strings for comp_core with delta = -1 
+.PP
+Definition at line 48 of file comps_and_checks\&.cpp\&.
+.SS "int comp_core (\fBline\fP fst, \fBline\fP scd, int delta)"
+
+.PP
+.nf
+\brief Core of comparison
+\param line1 first line
+\param line2 second line
+\param delta number that is added to lft of each string on each turn
+\return -1 - line1 < line2 with current delta
+\return 0 - line1 = line2
+\return 1 - line1 > line2 with current delta
+
+.fi
+.PP
+ Compares two strings, where lft points to the beginning of string, rgt - to element next after end of string Uses delta to move ptrs that lets sort strings in reverse 
+.PP
+Definition at line 83 of file comps_and_checks\&.cpp\&.
+.SS "int comp_str (const void * line1, const void * line2)"
+
+.PP
+.nf
+\brief Compares two strings, straight
+\param line1 first line
+\param line2 second line
+\return -1 if line1 < line2
+\return 0 if line1 = line2
+\return 1 if line1 > line2
+
+.fi
+.PP
+ Compares two strings the straight way prepares strings for comp_core with delta = 1 
+.PP
+Definition at line 28 of file comps_and_checks\&.cpp\&.
+.SS "size_t get_len (const char * file_name)"
+
+.PP
+Returns len of file in chars\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfile_name\fP name of file that's length will be returned 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+sizeof file in chars 
+.RE
+.PP
+
+.PP
+Definition at line 9 of file get_len\&.cpp\&.
+.SS "bool is_txt (const char c)"
+
+.PP
+Checks if c is a letter/number\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIc\fP char to check 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true if is a letter/number 
+.PP
+false - in any other case 
+.RE
+.PP
+
+.PP
+Definition at line 9 of file comps_and_checks\&.cpp\&.
+.SS "void print_line (\fBline\fP out)"
+
+.PP
+Definition at line 3 of file print_line\&.cpp\&.
+.SS "\fBtext\fP read_text (const char * file_name)"
+
+.PP
+.nf
+\brief Reads from file_name to text struct
+\param file_name name of file to read from
+\return struct text variable
+
+.fi
+.PP
+ In process uses funcs buffer, get_len 
+.PP
+Definition at line 10 of file read_text\&.cpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBerror_codes\fP errcod\fC [extern]\fP"
+
+.PP
+variable to store errors 
+.PP
+Definition at line 4 of file main\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Onegin forever from the source code\&.

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structline" xml:lang="en-US">
+<title>line Struct Reference</title>
+<indexterm><primary>line</primary></indexterm>
+<para>
+<computeroutput>#include &lt;protos.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_structline_1a2aa8bf75ce8dbb1642cc4075a49327f9">lft</link> = NULL</para>
+</listitem>
+            <listitem><para>char * <link linkend="_structline_1a9d8117828329e501e5d3a6fd93a3ef4f">rgt</link> = NULL</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 29 of file protos.h.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structline_1a2aa8bf75ce8dbb1642cc4075a49327f9"/>    <section>
+    <title>lft</title>
+<indexterm><primary>lft</primary><secondary>line</secondary></indexterm>
+<indexterm><primary>line</primary><secondary>lft</secondary></indexterm>
+<para><computeroutput>char* line::lft = NULL</computeroutput></para><para>
+Definition at line 31 of file protos.h.</para>
+    </section><anchor xml:id="_structline_1a9d8117828329e501e5d3a6fd93a3ef4f"/>    <section>
+    <title>rgt</title>
+<indexterm><primary>rgt</primary><secondary>line</secondary></indexterm>
+<indexterm><primary>line</primary><secondary>rgt</secondary></indexterm>
+<para><computeroutput>char* line::rgt = NULL</computeroutput></para><para>
+Definition at line 32 of file protos.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_protos_8h">protos.h</link></section>
+</section>

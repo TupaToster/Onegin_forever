@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_get__len_8cpp" xml:lang="en-US">
+<title>get_len.cpp File Reference</title>
+<indexterm><primary>get_len.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>size_t <link linkend="_get__len_8cpp_1af9a1bdab4547fd3a019e093879ff32f8">get_len</link> (const char *file_name)</para>
+
+<para>Returns len of file in chars. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_get__len_8cpp_1af9a1bdab4547fd3a019e093879ff32f8"/>    <section>
+    <title>get_len()</title>
+<indexterm><primary>get_len</primary><secondary>get_len.cpp</secondary></indexterm>
+<indexterm><primary>get_len.cpp</primary><secondary>get_len</secondary></indexterm>
+<para><computeroutput>size_t get_len (const char * file_name)</computeroutput></para><para>
+
+<para>Returns len of file in chars. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>file_name</entry>
+                                <entry>
+<para>name of file that&apos;s length will be returned </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>sizeof file in chars </para>
+</formalpara>
+</para>
+<para>
+Definition at line 9 of file get_len.cpp.</para>
+</section>
+</section>
+</section>

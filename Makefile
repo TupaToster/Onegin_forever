@@ -4,27 +4,14 @@ CFLAGS=-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal
 
 all:Onegin_sort.exe
 
-Onegin_sort.exe: main.o get_len.o read_text.o print_line.o buffer.o comps_and_checks.o
-	$(CC) $(CFLAGS) main.o get_len.o read_text.o buffer.o print_line.o comps_and_checks.o -o Onegin_sort.exe
+Onegin_sort.exe: main.o get_len.o read_text.o buffer.o
+	$(CC) main.o get_len.o read_text.o buffer.o -o Onegin_sort.exe $(CFLAGS)
 
-main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp -c
-
-get_len.o: get_len.cpp
-	$(CC) $(CFLAGS) get_len.cpp -c
-
-read_text.o: read_text.cpp
-	$(CC) $(CFLAGS) read_text.cpp -c
-
-buffer.o: buffer.cpp
-	$(CC) $(CFLAGS) buffer.cpp -c
-
-comps_and_checks.o: comps_and_checks.cpp
-	$(CC) $(CFLAGS) comps_and_checks.cpp -c
-
-print_line.o: print_line.cpp
-	$(CC) $(CFLAGS) print_line.cpp -c
+*.o: *.cpp
+	$(CC) *.cpp -c $(CFLAGS)
 
 clean:
 	rm -rf *.o *.exe*
 	clear
+
+.PHONY: clean

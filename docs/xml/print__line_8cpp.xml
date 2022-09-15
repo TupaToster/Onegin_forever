@@ -30,7 +30,7 @@
       </node>
       <node id="2">
         <label>protos.h</label>
-        <link refid="protos_8h_source"/>
+        <link refid="protos_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -74,11 +74,11 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;protos.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_line<sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>out)<sp/>{</highlight></codeline>
+<codeline lineno="3" refid="print__line_8cpp_1a989693a864596daad6a5c400f12ab9f8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="print__line_8cpp_1a989693a864596daad6a5c400f12ab9f8" kindref="member">print_line</ref><sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>out)<sp/>{</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(out.lft<sp/>!=<sp/>out.rgt)<sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/>*out.lft++);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(out.<ref refid="structline_1a2aa8bf75ce8dbb1642cc4075a49327f9" kindref="member">lft</ref><sp/>!=<sp/>out.<ref refid="structline_1a9d8117828329e501e5d3a6fd93a3ef4f" kindref="member">rgt</ref>)<sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,<sp/>*out.<ref refid="structline_1a2aa8bf75ce8dbb1642cc4075a49327f9" kindref="member">lft</ref>++);</highlight></codeline>
 <codeline lineno="6"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="print_line.cpp"/>

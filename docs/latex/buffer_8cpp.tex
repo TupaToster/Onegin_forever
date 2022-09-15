@@ -1,0 +1,33 @@
+\hypertarget{buffer_8cpp}{}\doxysection{buffer.\+cpp File Reference}
+\label{buffer_8cpp}\index{buffer.cpp@{buffer.cpp}}
+{\ttfamily \#include \char`\"{}protos.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{buffer_8cpp_a6efd426acd223ddf35ac7d8fbeb95781}{buffer}} (const char $\ast$file\+\_\+name, size\+\_\+t $\ast$char\+\_\+len, size\+\_\+t $\ast$str\+\_\+len)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{buffer_8cpp_a6efd426acd223ddf35ac7d8fbeb95781}\label{buffer_8cpp_a6efd426acd223ddf35ac7d8fbeb95781}} 
+\index{buffer.cpp@{buffer.cpp}!buffer@{buffer}}
+\index{buffer@{buffer}!buffer.cpp@{buffer.cpp}}
+\doxysubsubsection{\texorpdfstring{buffer()}{buffer()}}
+{\footnotesize\ttfamily char$\ast$ buffer (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file\+\_\+name,  }\item[{size\+\_\+t $\ast$}]{char\+\_\+len,  }\item[{size\+\_\+t $\ast$}]{str\+\_\+len }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Bufferizes file input
+\param file_name name of file to buffer
+\param char_len ptr to where to put len of file in chars
+\param str_len ptr to where to put len of file in strings
+\return ptr to memory that contains file'c contents
+\warning str_len calculation works correctly only on crlf endings
+\end{DoxyVerb}
+ Bufferizes file input and allocates memory for read content Calculates and returns length of file in chars and lines Allocated memory contains one \textquotesingle{}\textbackslash{}0\textquotesingle{} in front of file contents and one after Puts ~\newline
+ in front of \textquotesingle{}\textbackslash{}0\textquotesingle{} in buff if there is none $<$ Checks for absence of \textquotesingle{}~\newline
+\textquotesingle{} right before EOF for prettyness
+
+$<$ If there is one, places \textquotesingle{}~\newline
+\textquotesingle{} at the end of buff
+
+Definition at line 16 of file buffer.\+cpp.
+

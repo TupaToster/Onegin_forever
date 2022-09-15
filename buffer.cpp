@@ -28,7 +28,10 @@ char* buffer (const char* file_name, size_t* char_len, size_t* str_len) {
 
     *char_len = get_len (file_name);
 
+    printf ("%d", *char_len);
+
     char* buff = (char*) calloc (*char_len + 2 + n_before_EOF, sizeof (char));
+    assert (buff != NULL);
     buff++;
 
     get_out (fread (buff, sizeof (char), *char_len - n_before_EOF, input) == 0, NULL, MEM_ERR);
@@ -40,10 +43,5 @@ char* buffer (const char* file_name, size_t* char_len, size_t* str_len) {
     *str_len = *char_len - strlen (buff) + 1;
 
     fclose (input);
-
-    free (input);
-
-    delete input;
-
     return buff;
 }

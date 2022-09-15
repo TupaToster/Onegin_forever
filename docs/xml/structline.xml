@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="structline" kind="struct" language="C++" prot="public">
     <compoundname>line</compoundname>
+    <includes refid="protos_8h" local="no">protos.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structline_1a2aa8bf75ce8dbb1642cc4075a49327f9" prot="public" static="no" mutable="no">
         <type>char *</type>

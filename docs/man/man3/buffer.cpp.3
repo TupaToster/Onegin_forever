@@ -1,0 +1,47 @@
+.TH "buffer.cpp" 3 "Mon Sep 12 2022" "Version 3.01.12" "Onegin forever" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+buffer.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'protos\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBbuffer\fP (const char *file_name, size_t *char_len, size_t *str_len)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "char* buffer (const char * file_name, size_t * char_len, size_t * str_len)"
+
+.PP
+.nf
+\brief Bufferizes file input
+\param file_name name of file to buffer
+\param char_len ptr to where to put len of file in chars
+\param str_len ptr to where to put len of file in strings
+\return ptr to memory that contains file'c contents
+\warning str_len calculation works correctly only on crlf endings
+
+.fi
+.PP
+ Bufferizes file input and allocates memory for read content Calculates and returns length of file in chars and lines Allocated memory contains one '\\0' in front of file contents and one after Puts 
+.br
+ in front of '\\0' in buff if there is none < Checks for absence of '
+.br
+' right before EOF for prettyness
+.PP
+< If there is one, places '
+.br
+' at the end of buff
+.PP
+Definition at line 16 of file buffer\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Onegin forever from the source code\&.

@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="structtext" kind="struct" language="C++" prot="public">
     <compoundname>text</compoundname>
+    <includes refid="protos_8h" local="no">protos.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" prot="public" static="no" mutable="no">
         <type>size_t</type>

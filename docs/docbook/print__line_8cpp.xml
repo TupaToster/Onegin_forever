@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_print__line_8cpp" xml:lang="en-US">
+<title>print_line.cpp File Reference</title>
+<indexterm><primary>print_line.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_print__line_8cpp_1a989693a864596daad6a5c400f12ab9f8">print_line</link> (<link linkend="_structline">line</link> out)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_print__line_8cpp_1a989693a864596daad6a5c400f12ab9f8"/>    <section>
+    <title>print_line()</title>
+<indexterm><primary>print_line</primary><secondary>print_line.cpp</secondary></indexterm>
+<indexterm><primary>print_line.cpp</primary><secondary>print_line</secondary></indexterm>
+<para><computeroutput>void print_line (<link linkend="_structline">line</link> out)</computeroutput></para><para>
+Definition at line 3 of file print_line.cpp.</para>
+</section>
+</section>
+</section>

@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('protos_8h_source.html',''); initResiza
 <div class="title">protos.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<a href="protos_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
@@ -97,60 +97,79 @@ $(document).ready(function(){initNavTree('protos_8h_source.html',''); initResiza
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef ERRCODES</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">enum</span> error_codes {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    OK = 0, </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    BAD_ALLOC = -1, </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    MEM_ERR = 1</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06be">   12</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06be">error_codes</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59">   13</a></span>&#160;    <a class="code" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a> = 0, </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984">   14</a></span>&#160;    <a class="code" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984">BAD_ALLOC</a> = -1, </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e">MEM_ERR</a> = 1</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e">   16</a></span>&#160;};</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> error_codes errcod;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> <a class="code" href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06be">error_codes</a> <a class="code" href="protos_8h.html#a687445b8299810ea812987ee1f1e40a8">errcod</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define get_out( cond, return_val, error_code ) \</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="protos_8h.html#a26f739cc284b817d9528e74502692cf7">   20</a></span>&#160;<span class="preprocessor">#define get_out( cond, return_val, error_code ) \</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    if (cond) {                                 \</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">        errcod = error_code;                    \</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">        return return_val;                      \</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    }</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define ERRCODES</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="protos_8h.html#ada631bfe27c479e539e3f4f21f8ee376">   26</a></span>&#160;<span class="preprocessor">#define ERRCODES</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structline.html">   29</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structline.html">line</a> {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">char</span>* lft = NULL;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">char</span>* rgt = NULL;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structline.html#a2aa8bf75ce8dbb1642cc4075a49327f9">   31</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structline.html#a2aa8bf75ce8dbb1642cc4075a49327f9">lft</a> = NULL;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structline.html#a9d8117828329e501e5d3a6fd93a3ef4f">   32</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structline.html#a9d8117828329e501e5d3a6fd93a3ef4f">rgt</a> = NULL;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structtext.html">   35</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtext.html">text</a> {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">size_t</span> char_len = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">size_t</span> str_len = 0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">char</span>* txt = NULL;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="structline.html">line</a>* lines = NULL;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structtext.html#a5da1c900a1c8bbf4957d0d5d65a26cf7">   37</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structtext.html#a5da1c900a1c8bbf4957d0d5d65a26cf7">char_len</a> = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structtext.html#a2ae159e384419ba07db9ef32b79870f8">   38</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structtext.html#a2ae159e384419ba07db9ef32b79870f8">str_len</a> = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="structtext.html#a1335a6441ab32bd9e9519a215977b367">   39</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structtext.html#a1335a6441ab32bd9e9519a215977b367">txt</a> = NULL;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structtext.html#a826ba5613feb94342be61f8cce1c6771">   40</a></span>&#160;    <a class="code" href="structline.html">line</a>* <a class="code" href="structtext.html#a826ba5613feb94342be61f8cce1c6771">lines</a> = NULL;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">size_t</span> get_len (<span class="keyword">const</span> <span class="keywordtype">char</span>* file_name);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="protos_8h.html#af9a1bdab4547fd3a019e093879ff32f8">get_len</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* file_name);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="structtext.html">text</a> read_text (<span class="keyword">const</span> <span class="keywordtype">char</span>* file_name);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="structtext.html">text</a> <a class="code" href="protos_8h.html#a85228864e31203894b06498904bba1f5">read_text</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* file_name);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">char</span>* buffer (<span class="keyword">const</span> <span class="keywordtype">char</span>* file_name, <span class="keywordtype">size_t</span>* char_len, <span class="keywordtype">size_t</span>* str_len);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="protos_8h.html#a6efd426acd223ddf35ac7d8fbeb95781">buffer</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* file_name, <span class="keywordtype">size_t</span>* char_len, <span class="keywordtype">size_t</span>* str_len);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">bool</span> is_txt (<span class="keyword">const</span> <span class="keywordtype">char</span> c);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="protos_8h.html#a081a6c26b3871f66f9f33cf485749d7d">is_txt</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> c);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">int</span> comp_str (<span class="keyword">const</span> <span class="keywordtype">void</span>* line1, <span class="keyword">const</span> <span class="keywordtype">void</span>* line2);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">int</span> <a class="code" href="protos_8h.html#a0c387f083e01e98270406f842e5539fe">comp_str</a> (<span class="keyword">const</span> <span class="keywordtype">void</span>* line1, <span class="keyword">const</span> <span class="keywordtype">void</span>* line2);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">int</span> comp_arabic (<span class="keyword">const</span> <span class="keywordtype">void</span>* line1, <span class="keyword">const</span> <span class="keywordtype">void</span>* line2);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">int</span> <a class="code" href="protos_8h.html#a00852f5c07f148bb1645a9ab3c7c5763">comp_arabic</a> (<span class="keyword">const</span> <span class="keywordtype">void</span>* line1, <span class="keyword">const</span> <span class="keywordtype">void</span>* line2);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">int</span> comp_core (<a class="code" href="structline.html">line</a> fst, <a class="code" href="structline.html">line</a> scd, <span class="keywordtype">int</span> delta);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">int</span> <a class="code" href="protos_8h.html#aa0fbc2bf8621745b9b60c6b64610c62e">comp_core</a> (<a class="code" href="structline.html">line</a> fst, <a class="code" href="structline.html">line</a> scd, <span class="keywordtype">int</span> delta);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> print_line (<a class="code" href="structline.html">line</a> out);</div>
-<div class="ttc" id="astructline_html"><div class="ttname"><a href="structline.html">line</a></div><div class="ttdef"><b>Definition:</b> protos.h:29</div></div>
-<div class="ttc" id="astructtext_html"><div class="ttname"><a href="structtext.html">text</a></div><div class="ttdef"><b>Definition:</b> protos.h:35</div></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="protos_8h.html#a989693a864596daad6a5c400f12ab9f8">print_line</a> (<a class="code" href="structline.html">line</a> out);</div>
+<div class="ttc" id="aprotos_8h_html_a00852f5c07f148bb1645a9ab3c7c5763"><div class="ttname"><a href="protos_8h.html#a00852f5c07f148bb1645a9ab3c7c5763">comp_arabic</a></div><div class="ttdeci">int comp_arabic(const void *line1, const void *line2)</div><div class="ttdef"><b>Definition:</b> <a href="comps__and__checks_8cpp_source.html#l00048">comps_and_checks.cpp:48</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a081a6c26b3871f66f9f33cf485749d7d"><div class="ttname"><a href="protos_8h.html#a081a6c26b3871f66f9f33cf485749d7d">is_txt</a></div><div class="ttdeci">bool is_txt(const char c)</div><div class="ttdoc">Checks if c is a letter/number.</div><div class="ttdef"><b>Definition:</b> <a href="comps__and__checks_8cpp_source.html#l00009">comps_and_checks.cpp:9</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a0c387f083e01e98270406f842e5539fe"><div class="ttname"><a href="protos_8h.html#a0c387f083e01e98270406f842e5539fe">comp_str</a></div><div class="ttdeci">int comp_str(const void *line1, const void *line2)</div><div class="ttdef"><b>Definition:</b> <a href="comps__and__checks_8cpp_source.html#l00028">comps_and_checks.cpp:28</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a687445b8299810ea812987ee1f1e40a8"><div class="ttname"><a href="protos_8h.html#a687445b8299810ea812987ee1f1e40a8">errcod</a></div><div class="ttdeci">error_codes errcod</div><div class="ttdoc">variable to store errors</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a6efd426acd223ddf35ac7d8fbeb95781"><div class="ttname"><a href="protos_8h.html#a6efd426acd223ddf35ac7d8fbeb95781">buffer</a></div><div class="ttdeci">char * buffer(const char *file_name, size_t *char_len, size_t *str_len)</div><div class="ttdef"><b>Definition:</b> <a href="buffer_8cpp_source.html#l00016">buffer.cpp:16</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a85228864e31203894b06498904bba1f5"><div class="ttname"><a href="protos_8h.html#a85228864e31203894b06498904bba1f5">read_text</a></div><div class="ttdeci">text read_text(const char *file_name)</div><div class="ttdef"><b>Definition:</b> <a href="read__text_8cpp_source.html#l00010">read_text.cpp:10</a></div></div>
+<div class="ttc" id="aprotos_8h_html_a989693a864596daad6a5c400f12ab9f8"><div class="ttname"><a href="protos_8h.html#a989693a864596daad6a5c400f12ab9f8">print_line</a></div><div class="ttdeci">void print_line(line out)</div><div class="ttdef"><b>Definition:</b> <a href="print__line_8cpp_source.html#l00003">print_line.cpp:3</a></div></div>
+<div class="ttc" id="aprotos_8h_html_aa0fbc2bf8621745b9b60c6b64610c62e"><div class="ttname"><a href="protos_8h.html#aa0fbc2bf8621745b9b60c6b64610c62e">comp_core</a></div><div class="ttdeci">int comp_core(line fst, line scd, int delta)</div><div class="ttdef"><b>Definition:</b> <a href="comps__and__checks_8cpp_source.html#l00083">comps_and_checks.cpp:83</a></div></div>
+<div class="ttc" id="aprotos_8h_html_abfd51332ef0e0ba71f951a69e68e06be"><div class="ttname"><a href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06be">error_codes</a></div><div class="ttdeci">error_codes</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00012">protos.h:12</a></div></div>
+<div class="ttc" id="aprotos_8h_html_abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59"><div class="ttname"><a href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59">OK</a></div><div class="ttdeci">@ OK</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00013">protos.h:13</a></div></div>
+<div class="ttc" id="aprotos_8h_html_abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984"><div class="ttname"><a href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984">BAD_ALLOC</a></div><div class="ttdeci">@ BAD_ALLOC</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00014">protos.h:14</a></div></div>
+<div class="ttc" id="aprotos_8h_html_abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e"><div class="ttname"><a href="protos_8h.html#abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e">MEM_ERR</a></div><div class="ttdeci">@ MEM_ERR</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00016">protos.h:15</a></div></div>
+<div class="ttc" id="aprotos_8h_html_af9a1bdab4547fd3a019e093879ff32f8"><div class="ttname"><a href="protos_8h.html#af9a1bdab4547fd3a019e093879ff32f8">get_len</a></div><div class="ttdeci">size_t get_len(const char *file_name)</div><div class="ttdoc">Returns len of file in chars.</div><div class="ttdef"><b>Definition:</b> <a href="get__len_8cpp_source.html#l00009">get_len.cpp:9</a></div></div>
+<div class="ttc" id="astructline_html"><div class="ttname"><a href="structline.html">line</a></div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00029">protos.h:29</a></div></div>
+<div class="ttc" id="astructline_html_a2aa8bf75ce8dbb1642cc4075a49327f9"><div class="ttname"><a href="structline.html#a2aa8bf75ce8dbb1642cc4075a49327f9">line::lft</a></div><div class="ttdeci">char * lft</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00031">protos.h:31</a></div></div>
+<div class="ttc" id="astructline_html_a9d8117828329e501e5d3a6fd93a3ef4f"><div class="ttname"><a href="structline.html#a9d8117828329e501e5d3a6fd93a3ef4f">line::rgt</a></div><div class="ttdeci">char * rgt</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00032">protos.h:32</a></div></div>
+<div class="ttc" id="astructtext_html"><div class="ttname"><a href="structtext.html">text</a></div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00035">protos.h:35</a></div></div>
+<div class="ttc" id="astructtext_html_a1335a6441ab32bd9e9519a215977b367"><div class="ttname"><a href="structtext.html#a1335a6441ab32bd9e9519a215977b367">text::txt</a></div><div class="ttdeci">char * txt</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00039">protos.h:39</a></div></div>
+<div class="ttc" id="astructtext_html_a2ae159e384419ba07db9ef32b79870f8"><div class="ttname"><a href="structtext.html#a2ae159e384419ba07db9ef32b79870f8">text::str_len</a></div><div class="ttdeci">size_t str_len</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00038">protos.h:38</a></div></div>
+<div class="ttc" id="astructtext_html_a5da1c900a1c8bbf4957d0d5d65a26cf7"><div class="ttname"><a href="structtext.html#a5da1c900a1c8bbf4957d0d5d65a26cf7">text::char_len</a></div><div class="ttdeci">size_t char_len</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00037">protos.h:37</a></div></div>
+<div class="ttc" id="astructtext_html_a826ba5613feb94342be61f8cce1c6771"><div class="ttname"><a href="structtext.html#a826ba5613feb94342be61f8cce1c6771">text::lines</a></div><div class="ttdeci">line * lines</div><div class="ttdef"><b>Definition:</b> <a href="protos_8h_source.html#l00040">protos.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>protos.h</b></li>
+    <li class="navelem"><a class="el" href="protos_8h.html">protos.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

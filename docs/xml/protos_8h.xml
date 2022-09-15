@@ -56,6 +56,48 @@
         <label>stdio.h</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>comps_and_checks.cpp</label>
+        <link refid="comps__and__checks_8cpp"/>
+      </node>
+      <node id="6">
+        <label>print_line.cpp</label>
+        <link refid="print__line_8cpp"/>
+      </node>
+      <node id="2">
+        <label>buffer.cpp</label>
+        <link refid="buffer_8cpp"/>
+      </node>
+      <node id="7">
+        <label>read_text.cpp</label>
+        <link refid="read__text_8cpp"/>
+      </node>
+      <node id="1">
+        <label>protos.h</label>
+        <link refid="protos_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>get_len.cpp</label>
+        <link refid="get__len_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="structline" prot="public">line</innerclass>
     <innerclass refid="structtext" prot="public">text</innerclass>
       <sectiondef kind="define">
@@ -65,7 +107,7 @@
         <param><defname>return_val</defname></param>
         <param><defname>error_code</defname></param>
         <initializer>    if (cond) {                                 \
-        errcod = error_code;                    \
+        <ref refid="protos_8h_1a687445b8299810ea812987ee1f1e40a8" kindref="member">errcod</ref> = error_code;                    \
         return return_val;                      \
     }</initializer>
         <briefdescription>
@@ -128,7 +170,7 @@
       </sectiondef>
       <sectiondef kind="var">
       <memberdef kind="variable" id="protos_8h_1a687445b8299810ea812987ee1f1e40a8" prot="public" static="no" mutable="no">
-        <type>error_codes</type>
+        <type><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06be" kindref="member">error_codes</ref></type>
         <definition>error_codes errcod</definition>
         <argsstring></argsstring>
         <name>errcod</name>
@@ -385,52 +427,52 @@
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ERRCODES</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>error_codes<sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>OK<sp/>=<sp/>0,<sp/></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>BAD_ALLOC<sp/>=<sp/>-1,<sp/></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>MEM_ERR<sp/>=<sp/>1</highlight></codeline>
-<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12" refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06be" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06be" kindref="member">error_codes</ref><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="14" refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref><sp/>=<sp/>-1,<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e" kindref="member">MEM_ERR</ref><sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="16" refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea67b5846d76d883bcefacc95351f7803e" refkind="member"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>error_codes<sp/>errcod;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06be" kindref="member">error_codes</ref><sp/><ref refid="protos_8h_1a687445b8299810ea812987ee1f1e40a8" kindref="member">errcod</ref>;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>get_out(<sp/>cond,<sp/>return_val,<sp/>error_code<sp/>)<sp/>\</highlight></codeline>
+<codeline lineno="20" refid="protos_8h_1a26f739cc284b817d9528e74502692cf7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>get_out(<sp/>cond,<sp/>return_val,<sp/>error_code<sp/>)<sp/>\</highlight></codeline>
 <codeline lineno="21"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(cond)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errcod<sp/>=<sp/>error_code;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>return_val;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
 <codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERRCODES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="protos_8h_1ada631bfe27c479e539e3f4f21f8ee376" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERRCODES</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29" refid="structline" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structline" kindref="compound">line</ref><sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>lft<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>rgt<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="31" refid="structline_1a2aa8bf75ce8dbb1642cc4075a49327f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structline_1a2aa8bf75ce8dbb1642cc4075a49327f9" kindref="member">lft</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="32" refid="structline_1a9d8117828329e501e5d3a6fd93a3ef4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structline_1a9d8117828329e501e5d3a6fd93a3ef4f" kindref="member">rgt</ref><sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="35" refid="structtext" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtext" kindref="compound">text</ref><sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>char_len<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>str_len<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt<sp/>=<sp/>NULL;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structline" kindref="compound">line</ref>*<sp/>lines<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="37" refid="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" kindref="member">char_len</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38" refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" kindref="member">str_len</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39" refid="structtext_1a1335a6441ab32bd9e9519a215977b367" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kindref="member">txt</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="40" refid="structtext_1a826ba5613feb94342be61f8cce1c6771" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structline" kindref="compound">line</ref>*<sp/><ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref><sp/>=<sp/>NULL;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>get_len<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1af9a1bdab4547fd3a019e093879ff32f8" kindref="member">get_len</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><ref refid="structtext" kindref="compound">text</ref><sp/>read_text<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="structtext" kindref="compound">text</ref><sp/><ref refid="protos_8h_1a85228864e31203894b06498904bba1f5" kindref="member">read_text</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>buffer<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>char_len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>str_len);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="protos_8h_1a6efd426acd223ddf35ac7d8fbeb95781" kindref="member">buffer</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>char_len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">*<sp/>str_len);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_txt<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1a081a6c26b3871f66f9f33cf485749d7d" kindref="member">is_txt</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp_str<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line2);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1a0c387f083e01e98270406f842e5539fe" kindref="member">comp_str</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line2);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp_arabic<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line2);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1a00852f5c07f148bb1645a9ab3c7c5763" kindref="member">comp_arabic</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>line2);</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>comp_core<sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>fst,<sp/><ref refid="structline" kindref="compound">line</ref><sp/>scd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1aa0fbc2bf8621745b9b60c6b64610c62e" kindref="member">comp_core</ref><sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>fst,<sp/><ref refid="structline" kindref="compound">line</ref><sp/>scd,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delta);</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_line<sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>out);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="protos_8h_1a989693a864596daad6a5c400f12ab9f8" kindref="member">print_line</ref><sp/>(<ref refid="structline" kindref="compound">line</ref><sp/>out);</highlight></codeline>
     </programlisting>
     <location file="protos.h"/>
   </compounddef>

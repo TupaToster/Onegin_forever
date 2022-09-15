@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_comps__and__checks_8cpp" xml:lang="en-US">
+<title>comps_and_checks.cpp File Reference</title>
+<indexterm><primary>comps_and_checks.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_comps__and__checks_8cpp_1a081a6c26b3871f66f9f33cf485749d7d">is_txt</link> (const char c)</para>
+
+<para>Checks if c is a letter/number. </para>
+</listitem>
+            <listitem><para>int <link linkend="_comps__and__checks_8cpp_1a0c387f083e01e98270406f842e5539fe">comp_str</link> (const void *line1, const void *line2)</para>
+</listitem>
+            <listitem><para>int <link linkend="_comps__and__checks_8cpp_1a00852f5c07f148bb1645a9ab3c7c5763">comp_arabic</link> (const void *line1, const void *line2)</para>
+</listitem>
+            <listitem><para>int <link linkend="_comps__and__checks_8cpp_1aa0fbc2bf8621745b9b60c6b64610c62e">comp_core</link> (<link linkend="_structline">line</link> fst, <link linkend="_structline">line</link> scd, int delta)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_comps__and__checks_8cpp_1a00852f5c07f148bb1645a9ab3c7c5763"/>    <section>
+    <title>comp_arabic()</title>
+<indexterm><primary>comp_arabic</primary><secondary>comps_and_checks.cpp</secondary></indexterm>
+<indexterm><primary>comps_and_checks.cpp</primary><secondary>comp_arabic</secondary></indexterm>
+<para><computeroutput>int comp_arabic (const void * line1, const void * line2)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Compares two strings, reverse
+\param line1 first line
+\param line2 second line
+\return -1 if line1 &lt; line2 in reverse
+\return 0 if line1 = line2
+\return 1 if line1 &gt; line2 in reverse
+</computeroutput></literallayout> Compares two strings in reverse Prepares strings for comp_core with delta = -1 </para>
+<para>
+Definition at line 48 of file comps_and_checks.cpp.</para>
+    </section><anchor xml:id="_comps__and__checks_8cpp_1aa0fbc2bf8621745b9b60c6b64610c62e"/>    <section>
+    <title>comp_core()</title>
+<indexterm><primary>comp_core</primary><secondary>comps_and_checks.cpp</secondary></indexterm>
+<indexterm><primary>comps_and_checks.cpp</primary><secondary>comp_core</secondary></indexterm>
+<para><computeroutput>int comp_core (<link linkend="_structline">line</link> fst, <link linkend="_structline">line</link> scd, int delta)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Core of comparison
+\param line1 first line
+\param line2 second line
+\param delta number that is added to lft of each string on each turn
+\return -1 - line1 &lt; line2 with current delta
+\return 0 - line1 = line2
+\return 1 - line1 &gt; line2 with current delta
+</computeroutput></literallayout> Compares two strings, where lft points to the beginning of string, rgt - to element next after end of string Uses delta to move ptrs that lets sort strings in reverse </para>
+<para>
+Definition at line 83 of file comps_and_checks.cpp.</para>
+    </section><anchor xml:id="_comps__and__checks_8cpp_1a0c387f083e01e98270406f842e5539fe"/>    <section>
+    <title>comp_str()</title>
+<indexterm><primary>comp_str</primary><secondary>comps_and_checks.cpp</secondary></indexterm>
+<indexterm><primary>comps_and_checks.cpp</primary><secondary>comp_str</secondary></indexterm>
+<para><computeroutput>int comp_str (const void * line1, const void * line2)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Compares two strings, straight
+\param line1 first line
+\param line2 second line
+\return -1 if line1 &lt; line2
+\return 0 if line1 = line2
+\return 1 if line1 &gt; line2
+</computeroutput></literallayout> Compares two strings the straight way prepares strings for comp_core with delta = 1 </para>
+<para>
+Definition at line 28 of file comps_and_checks.cpp.</para>
+    </section><anchor xml:id="_comps__and__checks_8cpp_1a081a6c26b3871f66f9f33cf485749d7d"/>    <section>
+    <title>is_txt()</title>
+<indexterm><primary>is_txt</primary><secondary>comps_and_checks.cpp</secondary></indexterm>
+<indexterm><primary>comps_and_checks.cpp</primary><secondary>is_txt</secondary></indexterm>
+<para><computeroutput>bool is_txt (const char c)</computeroutput></para><para>
+
+<para>Checks if c is a letter/number. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>c</entry>
+                                <entry>
+<para>char to check </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true if is a letter/number </para>
+
+<para>false - in any other case </para>
+</formalpara>
+</para>
+<para>
+Definition at line 9 of file comps_and_checks.cpp.</para>
+</section>
+</section>
+</section>

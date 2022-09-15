@@ -11,22 +11,15 @@ So it's basically what makes it not a set of funcs
 */
 int main () {
     
-    text onegin = read_text ("Onegin");
+    text test_input = read_text ("Onegin");
 
-    qsort (onegin.lines, onegin.str_len, sizeof (line), &comp_str);///< Sorts strings pravoslavno
+    printf ("char_len : %d \n" "str_len : %d\n" "Input as string :\n" "%s\n" "---------------\n" "Input as separate lines :\n", test_input.char_len, test_input.str_len, test_input.txt);
 
-    for (size_t i = 0; i < onegin.str_len; i++)
-        print_line (onegin.lines[i]);
+    for (size_t i = 0; i < test_input.str_len; i++) {
 
-    printf ("-----------------------------\n");
-    
-    qsort (onegin.lines, onegin.str_len, sizeof (line), &comp_arabic);///< Sorts strings arabsky
+        char* ptr = test_input.lines[i].lft;
+        while (ptr != test_input.lines[i].rgt) printf ("%c", *ptr++);
+    }
 
-    for (size_t i = 0; i < onegin.str_len; i++)
-        print_line (onegin.lines[i]);
-
-    printf ("-----------------------------\n");
-
-    printf ("%s", onegin.txt);
-
+    printf ("\n-------------");
 }

@@ -30,7 +30,7 @@
       </node>
       <node id="2">
         <label>protos.h</label>
-        <link refid="protos_8h_source"/>
+        <link refid="protos_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -52,11 +52,11 @@
     </incdepgraph>
       <sectiondef kind="var">
       <memberdef kind="variable" id="main_8cpp_1a687445b8299810ea812987ee1f1e40a8" prot="public" static="no" mutable="no">
-        <type>error_codes</type>
+        <type><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06be" kindref="member">error_codes</ref></type>
         <definition>error_codes errcod</definition>
         <argsstring></argsstring>
         <name>errcod</name>
-        <initializer>= OK</initializer>
+        <initializer>= <ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref></initializer>
         <briefdescription>
 <para>variable to store errors </para>
         </briefdescription>
@@ -91,31 +91,31 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;protos.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal">error_codes<sp/>errcod<sp/>=<sp/>OK;<sp/></highlight></codeline>
+<codeline lineno="4" refid="main_8cpp_1a687445b8299810ea812987ee1f1e40a8" refkind="member"><highlight class="normal"><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06be" kindref="member">error_codes</ref><sp/><ref refid="main_8cpp_1a687445b8299810ea812987ee1f1e40a8" kindref="member">errcod</ref><sp/>=<sp/><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref>;<sp/></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main<sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="12" refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref><sp/>()<sp/>{</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtext" kindref="compound">text</ref><sp/>onegin<sp/>=<sp/>read_text<sp/>(</highlight><highlight class="stringliteral">&quot;Onegin&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtext" kindref="compound">text</ref><sp/>onegin<sp/>=<sp/><ref refid="protos_8h_1a85228864e31203894b06498904bba1f5" kindref="member">read_text</ref><sp/>(</highlight><highlight class="stringliteral">&quot;Onegin&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>qsort<sp/>(onegin.lines,<sp/>onegin.str_len,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/>&amp;comp_str);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>qsort<sp/>(onegin.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>,<sp/>onegin.<ref refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" kindref="member">str_len</ref>,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/>&amp;<ref refid="comps__and__checks_8cpp_1a0c387f083e01e98270406f842e5539fe" kindref="member">comp_str</ref>);</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>onegin.str_len;<sp/>i++)</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print_line<sp/>(onegin.lines[i]);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>onegin.<ref refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" kindref="member">str_len</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__line_8cpp_1a989693a864596daad6a5c400f12ab9f8" kindref="member">print_line</ref><sp/>(onegin.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[i]);</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;-----------------------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>qsort<sp/>(onegin.lines,<sp/>onegin.str_len,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/>&amp;comp_arabic);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>qsort<sp/>(onegin.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>,<sp/>onegin.<ref refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" kindref="member">str_len</ref>,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>),<sp/>&amp;<ref refid="comps__and__checks_8cpp_1a00852f5c07f148bb1645a9ab3c7c5763" kindref="member">comp_arabic</ref>);</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>onegin.str_len;<sp/>i++)</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print_line<sp/>(onegin.lines[i]);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>onegin.<ref refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" kindref="member">str_len</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="print__line_8cpp_1a989693a864596daad6a5c400f12ab9f8" kindref="member">print_line</ref><sp/>(onegin.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[i]);</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;-----------------------------\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>onegin.txt);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>onegin.<ref refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kindref="member">txt</ref>);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal">}</highlight></codeline>
     </programlisting>

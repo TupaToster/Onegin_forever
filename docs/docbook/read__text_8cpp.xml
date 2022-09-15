@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_read__text_8cpp" xml:lang="en-US">
+<title>read_text.cpp File Reference</title>
+<indexterm><primary>read_text.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structtext">text</link> <link linkend="_read__text_8cpp_1a85228864e31203894b06498904bba1f5">read_text</link> (const char *file_name)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_read__text_8cpp_1a85228864e31203894b06498904bba1f5"/>    <section>
+    <title>read_text()</title>
+<indexterm><primary>read_text</primary><secondary>read_text.cpp</secondary></indexterm>
+<indexterm><primary>read_text.cpp</primary><secondary>read_text</secondary></indexterm>
+<para><computeroutput><link linkend="_structtext">text</link> read_text (const char * file_name)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Reads from file_name to text struct
+\param file_name name of file to read from
+\return struct text variable
+</computeroutput></literallayout> In process uses funcs buffer, get_len </para>
+<para>
+Definition at line 10 of file read_text.cpp.</para>
+</section>
+</section>
+</section>

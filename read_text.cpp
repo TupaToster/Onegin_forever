@@ -21,7 +21,7 @@ text read_text (const char* file_name) {
 
         if (input.lines[lines_iter].lft == NULL) input.lines[lines_iter].lft = input.txt + i;
         
-        if (input.txt[i] == '\n') {
+        else if (input.txt[i] == '\n') {
  
             input.lines[lines_iter].rgt = input.txt + i + 1;
             lines_iter++;

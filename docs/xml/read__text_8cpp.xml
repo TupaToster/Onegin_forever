@@ -30,7 +30,7 @@
       </node>
       <node id="2">
         <label>protos.h</label>
-        <link refid="protos_8h_source"/>
+        <link refid="protos_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -78,31 +78,31 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;protos.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="protos_8h" kindref="compound">protos.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><ref refid="structtext" kindref="compound">text</ref><sp/>read_text<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name)<sp/>{</highlight></codeline>
+<codeline lineno="10" refid="protos_8h_1a85228864e31203894b06498904bba1f5" refkind="member"><highlight class="normal"><ref refid="structtext" kindref="compound">text</ref><sp/><ref refid="read__text_8cpp_1a85228864e31203894b06498904bba1f5" kindref="member">read_text</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name)<sp/>{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structtext" kindref="compound">text</ref><sp/>input<sp/>=<sp/>{};</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>input.txt<sp/>=<sp/>buffer<sp/>(file_name,<sp/>&amp;input.char_len,<sp/>&amp;input.str_len);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>input.<ref refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kindref="member">txt</ref><sp/>=<sp/><ref refid="buffer_8cpp_1a6efd426acd223ddf35ac7d8fbeb95781" kindref="member">buffer</ref><sp/>(file_name,<sp/>&amp;input.<ref refid="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" kindref="member">char_len</ref>,<sp/>&amp;input.<ref refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" kindref="member">str_len</ref>);</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>input.lines<sp/>=<sp/>(<ref refid="structline" kindref="compound">line</ref>*)<sp/>calloc<sp/>(input.str_len<sp/>+<sp/>1,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>));</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>get_out<sp/>(input.lines<sp/>==<sp/>NULL,<sp/>{},<sp/>BAD_ALLOC);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>input.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref><sp/>=<sp/>(<ref refid="structline" kindref="compound">line</ref>*)<sp/>calloc<sp/>(input.<ref refid="structtext_1a2ae159e384419ba07db9ef32b79870f8" kindref="member">str_len</ref><sp/>+<sp/>1,<sp/>sizeof<sp/>(<ref refid="structline" kindref="compound">line</ref>));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="protos_8h_1a26f739cc284b817d9528e74502692cf7" kindref="member">get_out</ref><sp/>(input.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref><sp/>==<sp/>NULL,<sp/>{},<sp/><ref refid="protos_8h_1abfd51332ef0e0ba71f951a69e68e06bea660150ee9830d9dde6c013a814618984" kindref="member">BAD_ALLOC</ref>);</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lines_iter<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>input.char_len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>input.<ref refid="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" kindref="member">char_len</ref>;<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.lines[lines_iter].lft<sp/>==<sp/>NULL)<sp/>input.lines[lines_iter].lft<sp/>=<sp/>input.txt<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[lines_iter].<ref refid="structline_1a2aa8bf75ce8dbb1642cc4075a49327f9" kindref="member">lft</ref><sp/>==<sp/>NULL)<sp/>input.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[lines_iter].<ref refid="structline_1a2aa8bf75ce8dbb1642cc4075a49327f9" kindref="member">lft</ref><sp/>=<sp/>input.<ref refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kindref="member">txt</ref><sp/>+<sp/>i;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.txt[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.<ref refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kindref="member">txt</ref>[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input.lines[lines_iter].rgt<sp/>=<sp/>input.txt<sp/>+<sp/>i<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[lines_iter].<ref refid="structline_1a9d8117828329e501e5d3a6fd93a3ef4f" kindref="member">rgt</ref><sp/>=<sp/>input.<ref refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kindref="member">txt</ref><sp/>+<sp/>i<sp/>+<sp/>1;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lines_iter++;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>input.lines[lines_iter].rgt<sp/>=<sp/>input.txt<sp/>+<sp/>input.char_len;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>input.txt[input.char_len]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>input.<ref refid="structtext_1a826ba5613feb94342be61f8cce1c6771" kindref="member">lines</ref>[lines_iter].<ref refid="structline_1a9d8117828329e501e5d3a6fd93a3ef4f" kindref="member">rgt</ref><sp/>=<sp/>input.<ref refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kindref="member">txt</ref><sp/>+<sp/>input.<ref refid="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" kindref="member">char_len</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>input.<ref refid="structtext_1a1335a6441ab32bd9e9519a215977b367" kindref="member">txt</ref>[input.<ref refid="structtext_1a5da1c900a1c8bbf4957d0d5d65a26cf7" kindref="member">char_len</ref>]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>input;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">}</highlight></codeline>

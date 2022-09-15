@@ -2,11 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-#include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
-/// \todo bufferisation, lstat, no assert yes error codes
 
 #ifndef ERRCODES
 enum error_codes {

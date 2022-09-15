@@ -1,0 +1,93 @@
+\hypertarget{comps__and__checks_8cpp}{}\doxysection{comps\+\_\+and\+\_\+checks.\+cpp File Reference}
+\label{comps__and__checks_8cpp}\index{comps\_and\_checks.cpp@{comps\_and\_checks.cpp}}
+{\ttfamily \#include \char`\"{}protos.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{comps__and__checks_8cpp_a081a6c26b3871f66f9f33cf485749d7d}{is\+\_\+txt}} (const char c)
+\begin{DoxyCompactList}\small\item\em Checks if c is a letter/number. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{comps__and__checks_8cpp_a0c387f083e01e98270406f842e5539fe}{comp\+\_\+str}} (const void $\ast$line1, const void $\ast$line2)
+\item 
+int \mbox{\hyperlink{comps__and__checks_8cpp_a00852f5c07f148bb1645a9ab3c7c5763}{comp\+\_\+arabic}} (const void $\ast$line1, const void $\ast$line2)
+\item 
+int \mbox{\hyperlink{comps__and__checks_8cpp_aa0fbc2bf8621745b9b60c6b64610c62e}{comp\+\_\+core}} (\mbox{\hyperlink{structline}{line}} fst, \mbox{\hyperlink{structline}{line}} scd, int delta)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{comps__and__checks_8cpp_a00852f5c07f148bb1645a9ab3c7c5763}\label{comps__and__checks_8cpp_a00852f5c07f148bb1645a9ab3c7c5763}} 
+\index{comps\_and\_checks.cpp@{comps\_and\_checks.cpp}!comp\_arabic@{comp\_arabic}}
+\index{comp\_arabic@{comp\_arabic}!comps\_and\_checks.cpp@{comps\_and\_checks.cpp}}
+\doxysubsubsection{\texorpdfstring{comp\_arabic()}{comp\_arabic()}}
+{\footnotesize\ttfamily int comp\+\_\+arabic (\begin{DoxyParamCaption}\item[{const void $\ast$}]{line1,  }\item[{const void $\ast$}]{line2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Compares two strings, reverse
+\param line1 first line
+\param line2 second line
+\return -1 if line1 < line2 in reverse
+\return 0 if line1 = line2
+\return 1 if line1 > line2 in reverse
+\end{DoxyVerb}
+ Compares two strings in reverse Prepares strings for comp\+\_\+core with delta = -\/1 
+
+Definition at line 48 of file comps\+\_\+and\+\_\+checks.\+cpp.
+
+\mbox{\Hypertarget{comps__and__checks_8cpp_aa0fbc2bf8621745b9b60c6b64610c62e}\label{comps__and__checks_8cpp_aa0fbc2bf8621745b9b60c6b64610c62e}} 
+\index{comps\_and\_checks.cpp@{comps\_and\_checks.cpp}!comp\_core@{comp\_core}}
+\index{comp\_core@{comp\_core}!comps\_and\_checks.cpp@{comps\_and\_checks.cpp}}
+\doxysubsubsection{\texorpdfstring{comp\_core()}{comp\_core()}}
+{\footnotesize\ttfamily int comp\+\_\+core (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structline}{line}}}]{fst,  }\item[{\mbox{\hyperlink{structline}{line}}}]{scd,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Core of comparison
+\param line1 first line
+\param line2 second line
+\param delta number that is added to lft of each string on each turn
+\return -1 - line1 < line2 with current delta
+\return 0 - line1 = line2
+\return 1 - line1 > line2 with current delta
+\end{DoxyVerb}
+ Compares two strings, where lft points to the beginning of string, rgt -\/ to element next after end of string Uses delta to move ptrs that lets sort strings in reverse 
+
+Definition at line 83 of file comps\+\_\+and\+\_\+checks.\+cpp.
+
+\mbox{\Hypertarget{comps__and__checks_8cpp_a0c387f083e01e98270406f842e5539fe}\label{comps__and__checks_8cpp_a0c387f083e01e98270406f842e5539fe}} 
+\index{comps\_and\_checks.cpp@{comps\_and\_checks.cpp}!comp\_str@{comp\_str}}
+\index{comp\_str@{comp\_str}!comps\_and\_checks.cpp@{comps\_and\_checks.cpp}}
+\doxysubsubsection{\texorpdfstring{comp\_str()}{comp\_str()}}
+{\footnotesize\ttfamily int comp\+\_\+str (\begin{DoxyParamCaption}\item[{const void $\ast$}]{line1,  }\item[{const void $\ast$}]{line2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\brief Compares two strings, straight
+\param line1 first line
+\param line2 second line
+\return -1 if line1 < line2
+\return 0 if line1 = line2
+\return 1 if line1 > line2
+\end{DoxyVerb}
+ Compares two strings the straight way prepares strings for comp\+\_\+core with delta = 1 
+
+Definition at line 28 of file comps\+\_\+and\+\_\+checks.\+cpp.
+
+\mbox{\Hypertarget{comps__and__checks_8cpp_a081a6c26b3871f66f9f33cf485749d7d}\label{comps__and__checks_8cpp_a081a6c26b3871f66f9f33cf485749d7d}} 
+\index{comps\_and\_checks.cpp@{comps\_and\_checks.cpp}!is\_txt@{is\_txt}}
+\index{is\_txt@{is\_txt}!comps\_and\_checks.cpp@{comps\_and\_checks.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_txt()}{is\_txt()}}
+{\footnotesize\ttfamily bool is\+\_\+txt (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption})}
+
+
+
+Checks if c is a letter/number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & char to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if is a letter/number 
+
+false -\/ in any other case 
+\end{DoxyReturn}
+
+
+Definition at line 9 of file comps\+\_\+and\+\_\+checks.\+cpp.
+

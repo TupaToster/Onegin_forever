@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_buffer_8cpp" xml:lang="en-US">
+<title>buffer.cpp File Reference</title>
+<indexterm><primary>buffer.cpp</primary></indexterm>
+<programlisting>#include &quot;protos.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_buffer_8cpp_1a6efd426acd223ddf35ac7d8fbeb95781">buffer</link> (const char *file_name, size_t *char_len, size_t *str_len)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_buffer_8cpp_1a6efd426acd223ddf35ac7d8fbeb95781"/>    <section>
+    <title>buffer()</title>
+<indexterm><primary>buffer</primary><secondary>buffer.cpp</secondary></indexterm>
+<indexterm><primary>buffer.cpp</primary><secondary>buffer</secondary></indexterm>
+<para><computeroutput>char* buffer (const char * file_name, size_t * char_len, size_t * str_len)</computeroutput></para>
+<para><literallayout><computeroutput>\brief Bufferizes file input
+\param file_name name of file to buffer
+\param char_len ptr to where to put len of file in chars
+\param str_len ptr to where to put len of file in strings
+\return ptr to memory that contains file&apos;c contents
+\warning str_len calculation works correctly only on crlf endings
+</computeroutput></literallayout> Bufferizes file input and allocates memory for read content Calculates and returns length of file in chars and lines Allocated memory contains one &apos;\0&apos; in front of file contents and one after Puts 
+<literallayout>&#160;&#xa;</literallayout>
+ in front of &apos;\0&apos; in buff if there is none </para>
+
+<para>&lt; Checks for absence of &apos;
+<literallayout>&#160;&#xa;</literallayout>
+&apos; right before EOF for prettyness</para>
+
+<para>&lt; If there is one, places &apos;
+<literallayout>&#160;&#xa;</literallayout>
+&apos; at the end of buff</para>
+<para>
+Definition at line 16 of file buffer.cpp.</para>
+</section>
+</section>
+</section>
